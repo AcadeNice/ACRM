@@ -1,0 +1,6 @@
+[
+    {"name": "name", "link": true},
+    {"name": "skillType", "width": 18},
+    {"name": "skillCategory", "width": 18},
+    {"name": "active", "width": 8}
+]

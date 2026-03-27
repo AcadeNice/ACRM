@@ -1,0 +1,81 @@
+{
+    "fields": {
+        "name": "Nom",
+        "codeFormation": "Code formation",
+        "filizDegreeId": "ID formation Filiz",
+        "modifierInformationsFiliz": "Modifier les informations Filiz",
+        "typeFormation": "Type de formation",
+        "modaliteFormation": "Modalité",
+        "rncpTitre": "Titre RNCP",
+        "rncpCode": "Code RNCP",
+        "codeNsf": "Code NSF",
+        "niveau": "Niveau",
+        "duree": "Durée (heures)",
+        "rythme": "Rythme",
+        "prerequis": "Pré requis",
+        "competencesEntree": "Compétences d'entrée",
+        "competencesSortie": "Compétences de sortie",
+        "publicCible": "Public cible",
+        "active": "Active",
+        "createdAt": "Date de création",
+        "modifiedAt": "Date de modification",
+        "contacts": "Contacts",
+        "opportunities": "Opportunités",
+        "skills": "Compétences",
+        "contrats": "Contrats",
+        "promotions": "Promotions"
+    },
+    "links": {
+        "contacts": "Contacts",
+        "opportunities": "Opportunités",
+        "skills": "Compétences",
+        "contrats": "Contrats",
+        "promotions": "Promotions"
+    },
+    "labels": {
+        "Create Formation": "Créer une formation"
+    },
+    "options": {
+        "typeFormation": {
+            "alternance": "Alternance",
+            "initiale": "Initiale",
+            "courte": "Courte"
+        },
+        "modaliteFormation": {
+            "presentiel": "Présentiel",
+            "distanciel": "Distanciel",
+            "mixte": "Mixte",
+            "eLearning": "E-learning"
+        },
+        "niveau": {
+            "niveau3CapBep": "Niveau 3 - CAP / BEP",
+            "niveau4Bac": "Niveau 4 - Bac",
+            "niveau5BacPlus2": "Niveau 5 - Bac +2",
+            "niveau6BacPlus3BacPlus4": "Niveau 6 - Bac +3 / Bac +4",
+            "niveau7Master": "Niveau 7 - Master",
+            "": "",
+            "Qualifiante": "Qualifiante"
+        },
+        "rythme": {
+            "tempsPlein": "Temps plein",
+            "unJourEcoleQuatreJoursEntreprise": "1 jour école / 4 jours entreprise",
+            "deuxJoursEcoleTroisJoursEntreprise": "2 jours école / 3 jours entreprise",
+            "uneSemaineEcoleTroisSemainesEntreprise": "1 semaine école / 3 semaines entreprise",
+            "uneSemaineEcoleUneSemaineEntreprise": "1 semaine école / 1 semaine entreprise",
+            "deuxSemainesEcoleDeuxSemainesEntreprise": "2 semaines école / 2 semaines entreprise",
+            "troisSemainesEcoleUneSemaineEntreprise": "3 semaines école / 1 semaine entreprise",
+            "eLearningLibre": "E-learning libre",
+            "ponctuelSessionsCourtes": "Ponctuel / sessions courtes",
+            "autre": "Autre"
+        }
+    },
+    "tooltips": {
+        "filizDegreeId": "Identifiant de la formation dans Filiz. À renseigner seulement pour les formations alternance synchronisées.",
+        "modifierInformationsFiliz": "Coche cette case seulement si tu dois corriger manuellement une information technique liée à Filiz.",
+        "typeFormation": "Alternance, initiale ou courte.",
+        "codeNsf": "Code NSF relevé manuellement sur France Compétences.",
+        "modaliteFormation": "Présentiel, distanciel, mixte ou e-learning.",
+        "duree": "Saisir uniquement le nombre d'heures de formation.",
+        "skills": "Compétences visées ou requises pour cette formation."
+    }
+}

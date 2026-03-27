@@ -1,0 +1,38 @@
+[
+    {
+        "name": "contratPanel",
+        "label": "📄 Contrat",
+        "rows": [
+            [{"name": "statutContrat"}, {"name": "contractCategory"}],
+            [{"name": "contratTypeGestion"}, false],
+            [{"name": "candidature"}, {"name": "promotion"}]
+        ]
+    },
+    {
+        "name": "periodePanel",
+        "label": "📆 Période",
+        "rows": [
+            [{"name": "dateDebut"}, {"name": "dateFin"}],
+            [{"name": "montant"}, false]
+        ]
+    },
+    {
+        "name": "filizPanel",
+        "label": "🔗 Filiz",
+        "rows": [
+            [{"name": "envoyeDansFiliz"}, {"name": "filizStatus"}],
+            [{"name": "filizFolderId"}, {"name": "filizQuotationId"}],
+            [{"name": "filizCurrentStep"}, {"name": "filizLastSyncAt"}],
+            [{"name": "filizSentAt"}, false],
+            [{"name": "filizErrorMessage", "fullWidth": true}],
+            [{"name": "commentaireAdmin", "fullWidth": true}]
+        ]
+    },
+    {
+        "name": "systemPanel",
+        "label": "🗂️ Système",
+        "rows": [
+            [{"name": "createdAt"}, {"name": "modifiedAt"}]
+        ]
+    }
+]

@@ -1,0 +1,7 @@
+[
+    {"name": "contact", "link": true, "width": 16},
+    {"name": "opportunity", "width": 22},
+    {"name": "statutCandidature", "width": 14},
+    {"name": "datePositionnement", "width": 12},
+    {"name": "dateEntretien", "width": 12}
+]

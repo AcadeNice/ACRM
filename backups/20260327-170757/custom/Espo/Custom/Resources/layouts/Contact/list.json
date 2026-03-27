@@ -1,0 +1,10 @@
+[
+    {"name": "name", "link": true},
+    {"name": "contactRoles", "width": 18},
+    {"name": "statutCandidat", "width": 14},
+    {"name": "account", "width": 16},
+    {"name": "formationPrincipale", "width": 16},
+    {"name": "sourceCategory", "width": 12},
+    {"name": "sourceJobboard", "width": 12},
+    {"name": "assignedUser", "width": 14}
+]

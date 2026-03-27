@@ -1,0 +1,340 @@
+{
+    "fields": {
+        "industry": {
+            "type": "enum",
+            "options": [
+                "",
+                "developpementWebLogiciel",
+                "informatiqueItReseaux",
+                "noCodeAutomatisation",
+                "dataIa",
+                "designGraphismeUxUi",
+                "marketingCommunication",
+                "commerceBusinessDeveloppement",
+                "eCommerce",
+                "gestionAdministratifRh",
+                "formationEducation",
+                "conseilServicesEntreprises",
+                "secteurPublicInstitution",
+                "associationEss",
+                "autre"
+            ],
+            "isSorted": false,
+            "style": {
+                "": null,
+                "developpementWebLogiciel": null,
+                "informatiqueItReseaux": null,
+                "noCodeAutomatisation": null,
+                "dataIa": null,
+                "designGraphismeUxUi": null,
+                "marketingCommunication": null,
+                "commerceBusinessDeveloppement": null,
+                "eCommerce": null,
+                "gestionAdministratifRh": null,
+                "formationEducation": null,
+                "conseilServicesEntreprises": null,
+                "secteurPublicInstitution": null,
+                "associationEss": null,
+                "autre": null
+            }
+        },
+        "accountTypeAcadeNice": {
+            "type": "enum",
+            "options": [
+                "entreprise",
+                "partenaire",
+                "autre"
+            ],
+            "default": "entreprise",
+            "displayAsLabel": true
+        },
+        "partnerType": {
+            "type": "enum",
+            "options": [
+                "",
+                "missionLocale",
+                "lycee",
+                "ecole",
+                "centreFormation",
+                "institutionPublique",
+                "servicePublicEmploi",
+                "association",
+                "autre"
+            ],
+            "displayAsLabel": true
+        },
+        "relationStatut": {
+            "type": "enum",
+            "options": [
+                "prospect",
+                "client",
+                "partenaire"
+            ],
+            "displayAsLabel": true
+        },
+        "originCategory": {
+            "type": "enum",
+            "options": [
+                "prospection",
+                "cooptation",
+                "siteWeb",
+                "telephone",
+                "reseauxSociaux",
+                "campagne",
+                "parrainage",
+                "evenement",
+                "autre"
+            ],
+            "style": {
+                "prospection": null,
+                "cooptation": null,
+                "siteWeb": null,
+                "telephone": null,
+                "reseauxSociaux": null,
+                "campagne": null,
+                "parrainage": null,
+                "evenement": null,
+                "autre": null
+            },
+            "default": "prospection"
+        },
+        "phoneNumber": {
+            "required": true
+        },
+        "originChannel": {
+            "type": "enum",
+            "options": [
+                "manuel",
+                "siteAcadeNice",
+                "telephone",
+                "linkedin",
+                "instagram",
+                "facebook",
+                "reseau",
+                "autre"
+            ]
+        },
+        "originPrescriberContact": {
+            "type": "link"
+        },
+        "originPrescriberAccount": {
+            "type": "link"
+        },
+        "originComment": {
+            "type": "text"
+        },
+        "siretAcadeNice": {
+            "type": "varchar",
+            "maxLength": 14,
+            "pattern": "^[0-9]{14}$",
+            "view": "custom:views/fields/siret"
+        },
+        "filizCompanyId": {
+            "type": "varchar",
+            "maxLength": 100
+        },
+        "modifierInformationsFiliz": {
+            "type": "bool",
+            "default": false
+        },
+        "zoneGeographique": {
+            "type": "varchar",
+            "maxLength": 255
+        },
+        "accepteAlternance": {
+            "type": "bool",
+            "default": false
+        },
+        "secteurEmployeur": {
+            "type": "enum",
+            "options": [
+                "prive",
+                "public"
+            ]
+        },
+        "typeEmployeurFiliz": {
+            "type": "enum",
+            "options": [
+                "",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16",
+                "21",
+                "22",
+                "23",
+                "24",
+                "25",
+                "26",
+                "27",
+                "28",
+                "29",
+                "30"
+            ]
+        },
+        "employeurSpecifiqueFiliz": {
+            "type": "enum",
+            "options": [
+                "",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4"
+            ]
+        },
+        "codeApe": {
+            "type": "varchar",
+            "maxLength": 20
+        },
+        "codeIdcc": {
+            "type": "varchar",
+            "maxLength": 20
+        },
+        "nombreSalaries": {
+            "type": "int"
+        },
+        "nbContratsSignes": {
+            "type": "int",
+            "default": 0,
+            "readOnly": true
+        },
+        "nbContrats12Mois": {
+            "type": "int",
+            "default": 0,
+            "readOnly": true
+        },
+        "dernierContratSigneLe": {
+            "type": "date",
+            "readOnly": true
+        },
+        "commentaireRelation": {
+            "type": "text"
+        },
+        "clientAgence": {
+            "type": "bool",
+            "default": false
+        },
+        "statutRelationAgence": {
+            "type": "enum",
+            "options": [
+                "prospect",
+                "client",
+                "ancienClient"
+            ],
+            "displayAsLabel": true
+        },
+        "typeClientAgence": {
+            "type": "enum",
+            "options": [
+                "",
+                "developpementWeb",
+                "noCode",
+                "design",
+                "maintenance",
+                "autre"
+            ],
+            "style": {
+                "": null,
+                "developpementWeb": null,
+                "noCode": null,
+                "design": null,
+                "maintenance": null,
+                "autre": null
+            },
+            "default": null
+        },
+        "contratMaintenanceEnCours": {
+            "type": "bool",
+            "default": false
+        },
+        "commentairesAgence": {
+            "type": "text"
+        },
+        "billingAddressStreetNumber": {
+            "type": "int"
+        },
+        "billingAddressStreetExtension": {
+            "type": "enum",
+            "options": [
+                "",
+                "bis",
+                "ter",
+                "quater",
+                "A",
+                "B",
+                "C",
+                "D",
+                "E",
+                "F"
+            ]
+        },
+        "billingAddressStreetType": {
+            "type": "enum",
+            "options": [
+                "rue",
+                "avenue",
+                "boulevard",
+                "chemin",
+                "impasse",
+                "allee",
+                "place",
+                "route",
+                "quai",
+                "residence",
+                "autre"
+            ]
+        },
+        "billingAddressStreetName": {
+            "type": "varchar",
+            "maxLength": 100
+        },
+        "billingAddressComplementFree": {
+            "type": "varchar",
+            "maxLength": 100
+        },
+        "billingAddressPostalCode": {
+            "type": "varchar",
+            "maxLength": 5,
+            "pattern": "^[0-9]{5}$",
+            "view": "custom:views/fields/postal-code"
+        },
+        "billingAddressCountry": {
+            "type": "enum",
+            "options": [
+                "France",
+                "Monaco",
+                "Italie",
+                "Espagne",
+                "Suisse",
+                "Allemagne",
+                "Belgique",
+                "Luxembourg",
+                "Andorre"
+            ],
+            "default": "France"
+        }
+    },
+    "links": {
+        "originPrescriberContact": {
+            "type": "belongsTo",
+            "entity": "Contact"
+        },
+        "originPrescriberAccount": {
+            "type": "belongsTo",
+            "entity": "Account"
+        },
+        "candidatures": {
+            "type": "hasMany",
+            "entity": "Candidature",
+            "foreign": "account"
+        },
+        "contrats": {
+            "type": "hasMany",
+            "entity": "Contrat",
+            "foreign": "account"
+        }
+    }
+}

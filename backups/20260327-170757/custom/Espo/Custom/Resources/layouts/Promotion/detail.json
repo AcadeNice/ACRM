@@ -1,0 +1,21 @@
+[
+    {
+        "label": "🎓 Promotion",
+        "rows": [
+            [{"name": "name"}, {"name": "formation"}],
+            [{"name": "dateDebut"}, {"name": "dateFin"}]
+        ]
+    },
+    {
+        "label": "🔗 Filiz",
+        "rows": [
+            [{"name": "filizClassId"}, {"name": "modifierInformationsFiliz"}]
+        ]
+    },
+    {
+        "label": "🗂️ Système",
+        "rows": [
+            [{"name": "createdAt"}, {"name": "modifiedAt"}]
+        ]
+    }
+]

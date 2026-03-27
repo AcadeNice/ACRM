@@ -1,0 +1,10 @@
+{
+    "fields": {
+        "createdAt": {
+            "onlyAdmin": true
+        },
+        "modifiedAt": {
+            "onlyAdmin": true
+        }
+    }
+}

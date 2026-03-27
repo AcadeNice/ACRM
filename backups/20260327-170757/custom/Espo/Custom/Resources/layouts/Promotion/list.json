@@ -1,0 +1,7 @@
+[
+    {"name": "name", "link": true},
+    {"name": "formation", "width": 20},
+    {"name": "filizClassId", "width": 18},
+    {"name": "dateDebut", "width": 12},
+    {"name": "dateFin", "width": 12}
+]

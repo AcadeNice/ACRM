@@ -1,0 +1,308 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "photoIdentite"
+                }
+            ],
+            [
+                {
+                    "name": "nomUsage"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "contactRoles"
+                },
+                {
+                    "name": "title"
+                },
+                {
+                    "name": "account"
+                }
+            ],
+            [
+                {
+                    "name": "emailAddress"
+                },
+                {
+                    "name": "phoneNumber"
+                }
+            ],
+            [
+                {
+                    "name": "extensionBoe"
+                },
+                {
+                    "name": "rqth"
+                },
+                {
+                    "name": "sportifHautNiveau"
+                },
+                {
+                    "name": "equivalenceJeune"
+                }
+            ],
+            [
+                {
+                    "name": "birthdate"
+                },
+                {
+                    "name": "numeroSecuriteSociale"
+                }
+            ],
+            [
+                {
+                    "name": "addressStreetNumber"
+                },
+                {
+                    "name": "addressStreetExtension"
+                },
+                {
+                    "name": "addressStreetType"
+                }
+            ],
+            [
+                {
+                    "name": "addressStreetName"
+                },
+                {
+                    "name": "addressPostalCode"
+                }
+            ],
+            [
+                {
+                    "name": "addressCity"
+                },
+                {
+                    "name": "addressCountry"
+                },
+                {
+                    "name": "addressComplementFree"
+                }
+            ],
+            [
+                {
+                    "name": "identiteCommentaires"
+                }
+            ]
+        ],
+        "style": "default",
+        "name": "identiteContact",
+        "label": "👤 Identité"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "statutCandidat"
+                },
+                {
+                    "name": "formationPrincipale"
+                }
+            ],
+            [
+                {
+                    "name": "testResultat"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "dateAdmission"
+                },
+                {
+                    "name": "datePlacement"
+                }
+            ]
+        ],
+        "style": "default",
+        "name": "parcoursCandidat",
+        "label": "🎓 Parcours"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "sourceCategory"
+                },
+                {
+                    "name": "sourceJobboard"
+                },
+                {
+                    "name": "sourceCvTheque"
+                }
+            ],
+            [
+                {
+                    "name": "sourcePrescriberContact"
+                },
+                {
+                    "name": "sourcePrescriberAccount"
+                }
+            ],
+            [
+                {
+                    "name": "sourceComment"
+                }
+            ]
+        ],
+        "style": "default",
+        "name": "sourceCandidat",
+        "label": "🧭 Source"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "zoneMobilite"
+                },
+                {
+                    "name": "permis"
+                }
+            ],
+            [
+                {
+                    "name": "skills"
+                },
+                {
+                    "name": "vehicule"
+                }
+            ],
+            [
+                {
+                    "name": "linkedinUrl"
+                },
+                {
+                    "name": "githubUrl"
+                }
+            ],
+            [
+                {
+                    "name": "portfolioUrl"
+                },
+                {
+                    "name": "portfolioFile"
+                }
+            ],
+            [
+                {
+                    "name": "cvUrl"
+                },
+                {
+                    "name": "cvFile"
+                }
+            ],
+            [
+                {
+                    "name": "profilCommentaires"
+                }
+            ]
+        ],
+        "style": "default",
+        "name": "profilCandidat",
+        "label": "📍 Profil"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "neEnFrance"
+                },
+                {
+                    "name": "nationaliteFiliz"
+                }
+            ],
+            [
+                {
+                    "name": "villeNaissance"
+                },
+                {
+                    "name": "departementNaissance"
+                }
+            ],
+            [
+                {
+                    "name": "sexeFiliz"
+                },
+                {
+                    "name": "emancipe"
+                }
+            ],
+            [
+                {
+                    "name": "responsableLegal"
+                },
+                {
+                    "name": "titreSejourAutoriseTravail"
+                }
+            ],
+            [
+                {
+                    "name": "filizUserId"
+                },
+                {
+                    "name": "modifierFilizUserId"
+                }
+            ]
+        ],
+        "style": "default",
+        "name": "filizCandidat",
+        "label": "🔗 Filiz"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "contactsAccompagnes"
+                }
+            ],
+            [
+                {
+                    "name": "tuteurCommentaires"
+                }
+            ]
+        ],
+        "style": "default",
+        "name": "relationTuteur",
+        "label": "🎯 Tuteur"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "parentRole"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "parentCommentaires"
+                }
+            ]
+        ],
+        "style": "default",
+        "name": "relationParent",
+        "label": "👨‍👩‍👧 Parent \/ Responsable"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "createdAt"
+                },
+                {
+                    "name": "modifiedAt"
+                }
+            ]
+        ],
+        "style": "default",
+        "name": "systemPanel",
+        "label": "🗂️ Système"
+    }
+]

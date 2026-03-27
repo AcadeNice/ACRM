@@ -1,0 +1,205 @@
+{
+    "fields": {
+        "account": {
+            "required": true
+        },
+        "contactOrganisation": {
+            "type": "link"
+        },
+        "formation": {
+            "type": "link"
+        },
+        "typeOpportunite": {
+            "type": "enum",
+            "options": [
+                "alternance",
+                "stage",
+                "emploi",
+                "autre"
+            ],
+            "displayAsLabel": true
+        },
+        "statutOpportunity": {
+            "type": "enum",
+            "options": [
+                "ouverte",
+                "enCours",
+                "pourvue",
+                "fermee",
+                "suspendue"
+            ],
+            "displayAsLabel": true
+        },
+        "localisation": {
+            "type": "varchar",
+            "maxLength": 255
+        },
+        "teletravail": {
+            "type": "enum",
+            "options": [
+                "",
+                "non",
+                "partiel",
+                "oui"
+            ]
+        },
+        "nombrePostes": {
+            "type": "int",
+            "default": 1
+        },
+        "nombreCandidatsAProposer": {
+            "type": "int",
+            "default": 1
+        },
+        "urgence": {
+            "type": "enum",
+            "options": [
+                "basse",
+                "normale",
+                "haute",
+                "urgente"
+            ],
+            "displayAsLabel": true
+        },
+        "niveauRequis": {
+            "type": "enum",
+            "options": [
+                "aucunNiveauPrecis",
+                "capBep",
+                "bac",
+                "bacPlus2",
+                "bacPlus3",
+                "bacPlus5",
+                "autre"
+            ]
+        },
+        "dateDebutSouhaitee": {
+            "type": "date"
+        },
+        "rythmeSouhaite": {
+            "type": "varchar",
+            "maxLength": 100
+        },
+        "referenceInterneJobAffinity": {
+            "type": "varchar",
+            "maxLength": 100
+        },
+        "modifierReferenceJobAffinity": {
+            "type": "bool",
+            "default": false
+        },
+        "annonceTitre": {
+            "type": "varchar",
+            "maxLength": 255
+        },
+        "annonceCourte": {
+            "type": "text"
+        },
+        "annonceTexte": {
+            "type": "text"
+        },
+        "annonceStatut": {
+            "type": "enum",
+            "options": [
+                "brouillon",
+                "aDiffuser",
+                "diffusee",
+                "pausee",
+                "fermee"
+            ],
+            "displayAsLabel": true
+        },
+        "annonceCanauxDiffusion": {
+            "type": "multiEnum",
+            "options": [
+                "jobAffinity",
+                "indeed",
+                "hellowork",
+                "linkedinJobs",
+                "welcomeToTheJungle",
+                "siteAcadeNice",
+                "reseauxSociaux",
+                "autre"
+            ]
+        },
+        "skills": {
+            "type": "linkMultiple"
+        },
+        "salaireMin": {
+            "type": "currency"
+        },
+        "salaireMax": {
+            "type": "currency"
+        },
+        "permisRequis": {
+            "type": "bool",
+            "default": false
+        },
+        "ageMinimum": {
+            "type": "int"
+        },
+        "ageMaximum": {
+            "type": "int"
+        },
+        "langueRequise": {
+            "type": "enum",
+            "options": [
+                "",
+                "francais",
+                "anglais",
+                "italien",
+                "espagnol",
+                "russe",
+                "ukrainien",
+                "allemand",
+                "portugais",
+                "neerlandais",
+                "luxembourgeois",
+                "polonais",
+                "tcheque",
+                "slovaque",
+                "slovene",
+                "croate",
+                "serbe",
+                "bosnien",
+                "bulgare",
+                "macedonien",
+                "bielorusse",
+                "autre"
+            ]
+        },
+        "datePublication": {
+            "type": "date"
+        },
+        "dateFinPublication": {
+            "type": "date"
+        }
+    },
+    "links": {
+        "contactOrganisation": {
+            "type": "belongsTo",
+            "entity": "Contact"
+        },
+        "formation": {
+            "type": "belongsTo",
+            "entity": "Formation",
+            "foreign": "opportunities"
+        },
+        "skills": {
+            "type": "hasMany",
+            "entity": "Skill",
+            "foreign": "opportunities",
+            "relationName": "opportunitySkill"
+        },
+        "candidatures": {
+            "type": "hasMany",
+            "entity": "Candidature",
+            "foreign": "opportunity"
+        },
+        "contrats": {
+            "type": "hasMany",
+            "entity": "Contrat",
+            "foreign": "opportunity"
+        }
+    }
+}

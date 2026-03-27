@@ -1,0 +1,310 @@
+{
+    "dynamicLogic": {
+        "fields": {
+            "partnerType": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accountTypeAcadeNice",
+                            "value": "partenaire"
+                        }
+                    ]
+                }
+            },
+            "siretAcadeNice": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accountTypeAcadeNice",
+                            "value": "entreprise"
+                        }
+                    ]
+                }
+            },
+            "filizCompanyId": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isFalse",
+                            "attribute": "modifierInformationsFiliz"
+                        }
+                    ]
+                }
+            },
+            "originPrescriberContact": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "equals",
+                                    "attribute": "originCategory",
+                                    "value": "cooptation"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "originCategory",
+                                    "value": "parrainage"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "originPrescriberAccount": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "equals",
+                                    "attribute": "originCategory",
+                                    "value": "cooptation"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "originCategory",
+                                    "value": "parrainage"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "accepteAlternance": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "equals",
+                                    "attribute": "accountTypeAcadeNice",
+                                    "value": "entreprise"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "accountTypeAcadeNice",
+                                    "value": "partenaire"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "accountTypeAcadeNice",
+                                    "value": "autre"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "secteurEmployeur": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isFalse",
+                            "attribute": "modifierInformationsFiliz"
+                        }
+                    ]
+                },
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accountTypeAcadeNice",
+                            "value": "entreprise"
+                        },
+                        {
+                            "type": "isTrue",
+                            "attribute": "accepteAlternance"
+                        }
+                    ]
+                }
+            },
+            "typeEmployeurFiliz": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isFalse",
+                            "attribute": "modifierInformationsFiliz"
+                        }
+                    ]
+                },
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accountTypeAcadeNice",
+                            "value": "entreprise"
+                        },
+                        {
+                            "type": "isTrue",
+                            "attribute": "accepteAlternance"
+                        }
+                    ]
+                }
+            },
+            "employeurSpecifiqueFiliz": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isFalse",
+                            "attribute": "modifierInformationsFiliz"
+                        }
+                    ]
+                },
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accountTypeAcadeNice",
+                            "value": "entreprise"
+                        },
+                        {
+                            "type": "isTrue",
+                            "attribute": "accepteAlternance"
+                        }
+                    ]
+                }
+            },
+            "modifierInformationsFiliz": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accountTypeAcadeNice",
+                            "value": "entreprise"
+                        },
+                        {
+                            "type": "isTrue",
+                            "attribute": "accepteAlternance"
+                        }
+                    ]
+                }
+            },
+            "codeApe": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accountTypeAcadeNice",
+                            "value": "entreprise"
+                        }
+                    ]
+                }
+            },
+            "codeIdcc": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accountTypeAcadeNice",
+                            "value": "entreprise"
+                        }
+                    ]
+                }
+            },
+            "nombreSalaries": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accountTypeAcadeNice",
+                            "value": "entreprise"
+                        }
+                    ]
+                }
+            }
+        },
+        "options": {
+            "relationStatut": [
+                {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accountTypeAcadeNice",
+                            "value": "partenaire"
+                        }
+                    ],
+                    "optionList": [
+                        "prospect",
+                        "partenaire"
+                    ]
+                },
+                {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "equals",
+                                    "attribute": "accountTypeAcadeNice",
+                                    "value": "entreprise"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "accountTypeAcadeNice",
+                                    "value": "autre"
+                                }
+                            ]
+                        }
+                    ],
+                    "optionList": [
+                        "prospect",
+                        "client"
+                    ]
+                }
+            ]
+        },
+        "panels": {
+            "relationPanel": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "accepteAlternance"
+                        }
+                    ]
+                }
+            },
+            "originePanel": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "originCategory"
+                        }
+                    ]
+                }
+            },
+            "filizPanel": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "accountTypeAcadeNice",
+                            "value": "entreprise"
+                        },
+                        {
+                            "type": "isTrue",
+                            "attribute": "accepteAlternance"
+                        }
+                    ]
+                }
+            },
+            "agencePanel": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "clientAgence"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "iconClass": "fas fa-briefcase",
+    "dynamicLogic": {
+        "fields": {
+            "referenceInterneJobAffinity": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isFalse",
+                            "attribute": "modifierReferenceJobAffinity"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+[
+    {"name": "name", "link": true},
+    {"name": "candidature", "width": 18},
+    {"name": "promotion", "width": 14},
+    {"name": "contractCategory", "width": 12},
+    {"name": "statutContrat", "width": 12},
+    {"name": "contratTypeGestion", "width": 12},
+    {"name": "filizStatus", "width": 12},
+    {"name": "dateDebut", "width": 12}
+]

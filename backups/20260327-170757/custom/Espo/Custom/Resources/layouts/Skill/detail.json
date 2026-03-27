@@ -1,0 +1,16 @@
+[
+    {
+        "label": "🧠 Compétence",
+        "rows": [
+            [{"name": "name"}, {"name": "skillType"}],
+            [{"name": "skillCategory"}, {"name": "active"}],
+            [{"name": "description", "fullWidth": true}]
+        ]
+    },
+    {
+        "label": "🗂️ Système",
+        "rows": [
+            [{"name": "createdAt"}, {"name": "modifiedAt"}]
+        ]
+    }
+]

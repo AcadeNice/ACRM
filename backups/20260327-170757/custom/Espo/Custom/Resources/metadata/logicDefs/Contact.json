@@ -1,0 +1,14 @@
+{
+    "fields": {
+        "filizUserId": {
+            "readOnly": {
+                "conditionGroup": [
+                    {
+                        "type": "isFalse",
+                        "attribute": "modifierFilizUserId"
+                    }
+                ]
+            }
+        }
+    }
+}

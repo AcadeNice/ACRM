@@ -1,0 +1,236 @@
+{
+    "entityClassName": "Espo\\Core\\Templates\\Entities\\BasePlus",
+    "repositoryClassName": "Espo\\Core\\Templates\\Repositories\\BasePlus",
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "required": true,
+            "maxLength": 255
+        },
+        "codeFormation": {
+            "type": "varchar",
+            "maxLength": 100
+        },
+        "filizDegreeId": {
+            "type": "varchar",
+            "maxLength": 100
+        },
+        "modifierInformationsFiliz": {
+            "type": "bool",
+            "default": false
+        },
+        "typeFormation": {
+            "type": "multiEnum",
+            "options": [
+                "alternance",
+                "initiale",
+                "courte"
+            ],
+            "default": [
+                "alternance"
+            ],
+            "displayAsLabel": true
+        },
+        "modaliteFormation": {
+            "type": "enum",
+            "options": [
+                "presentiel",
+                "distanciel",
+                "mixte",
+                "eLearning"
+            ],
+            "displayAsLabel": true
+        },
+        "rncpTitre": {
+            "type": "varchar",
+            "maxLength": 255
+        },
+        "rncpCode": {
+            "type": "varchar",
+            "maxLength": 100
+        },
+        "codeNsf": {
+            "type": "varchar",
+            "maxLength": 100
+        },
+        "niveau": {
+            "type": "enum",
+            "options": [
+                "",
+                "Qualifiante",
+                "niveau3CapBep",
+                "niveau4Bac",
+                "niveau5BacPlus2",
+                "niveau6BacPlus3BacPlus4",
+                "niveau7Master"
+            ],
+            "displayAsLabel": true,
+            "style": {
+                "": null,
+                "Qualifiante": null,
+                "niveau3CapBep": null,
+                "niveau4Bac": null,
+                "niveau5BacPlus2": null,
+                "niveau6BacPlus3BacPlus4": null,
+                "niveau7Master": null
+            }
+        },
+        "duree": {
+            "type": "int",
+            "min": 0
+        },
+        "rythme": {
+            "type": "enum",
+            "options": [
+                "unJourEcoleQuatreJoursEntreprise",
+                "deuxJoursEcoleTroisJoursEntreprise",
+                "uneSemaineEcoleTroisSemainesEntreprise",
+                "uneSemaineEcoleUneSemaineEntreprise",
+                "deuxSemainesEcoleDeuxSemainesEntreprise",
+                "troisSemainesEcoleUneSemaineEntreprise",
+                "tempsPlein",
+                "eLearningLibre",
+                "ponctuelSessionsCourtes",
+                "autre"
+            ],
+            "displayAsLabel": true
+        },
+        "prerequis": {
+            "type": "text"
+        },
+        "competencesEntree": {
+            "type": "text"
+        },
+        "competencesSortie": {
+            "type": "text"
+        },
+        "publicCible": {
+            "type": "text"
+        },
+        "active": {
+            "type": "bool",
+            "default": true
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "modifiedBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "assignedUser": {
+            "type": "link",
+            "required": false,
+            "view": "views/fields/assigned-user"
+        },
+        "teams": {
+            "type": "linkMultiple",
+            "view": "views/fields/teams"
+        },
+        "contacts": {
+            "type": "linkMultiple"
+        },
+        "opportunities": {
+            "type": "linkMultiple"
+        },
+        "skills": {
+            "type": "linkMultiple"
+        },
+        "contrats": {
+            "type": "linkMultiple"
+        },
+        "promotions": {
+            "type": "linkMultiple"
+        }
+    },
+    "links": {
+        "createdBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "modifiedBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "assignedUser": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "teams": {
+            "type": "hasMany",
+            "entity": "Team",
+            "relationName": "entityTeam",
+            "layoutRelationshipsDisabled": true
+        },
+        "meetings": {
+            "type": "hasMany",
+            "entity": "Meeting",
+            "foreign": "parent"
+        },
+        "calls": {
+            "type": "hasMany",
+            "entity": "Call",
+            "foreign": "parent"
+        },
+        "tasks": {
+            "type": "hasChildren",
+            "entity": "Task",
+            "foreign": "parent"
+        },
+        "emails": {
+            "type": "hasChildren",
+            "entity": "Email",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "contacts": {
+            "type": "hasMany",
+            "entity": "Contact",
+            "foreign": "formationPrincipale"
+        },
+        "opportunities": {
+            "type": "hasMany",
+            "entity": "Opportunity",
+            "foreign": "formation"
+        },
+        "skills": {
+            "type": "hasMany",
+            "entity": "Skill",
+            "foreign": "formations",
+            "relationName": "formationSkill"
+        },
+        "contrats": {
+            "type": "hasMany",
+            "entity": "Contrat",
+            "foreign": "formation"
+        },
+        "promotions": {
+            "type": "hasMany",
+            "entity": "Promotion",
+            "foreign": "formation"
+        }
+    },
+    "indexes": {
+        "assignedUser": {
+            "columns": ["assignedUserId", "deleted"]
+        },
+        "createdAt": {
+            "columns": ["createdAt"]
+        }
+    },
+    "collection": {
+        "orderBy": "name",
+        "order": "asc"
+    }
+}

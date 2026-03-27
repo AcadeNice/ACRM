@@ -1,0 +1,9 @@
+[
+    {"name": "name", "link": true},
+    {"name": "filizDegreeId", "width": 12},
+    {"name": "typeFormation", "width": 14},
+    {"name": "modaliteFormation", "width": 14},
+    {"name": "niveau", "width": 12},
+    {"name": "rncpCode", "width": 12},
+    {"name": "active", "width": 8}
+]

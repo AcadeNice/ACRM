@@ -1,0 +1,20 @@
+{
+    "scopeNames": {
+        "Account": "Organisation",
+        "Opportunity": "Offre",
+        "Formation": "Formation",
+        "Promotion": "Promotion",
+        "Skill": "Skill",
+        "Candidature": "Candidature",
+        "Contrat": "Contrat"
+    },
+    "scopeNamesPlural": {
+        "Account": "Organisations",
+        "Opportunity": "Offres",
+        "Formation": "Formations",
+        "Promotion": "Promotions",
+        "Skill": "Skills",
+        "Candidature": "Candidatures",
+        "Contrat": "Contrats"
+    }
+}

@@ -1,0 +1,135 @@
+{
+    "entityClassName": "Espo\\Core\\Templates\\Entities\\Base",
+    "repositoryClassName": "Espo\\Core\\Templates\\Repositories\\Base",
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "required": true,
+            "maxLength": 255
+        },
+        "skillType": {
+            "type": "enum",
+            "options": ["technique", "logiciel", "softSkill", "metier", "langue", "autre"],
+            "displayAsLabel": true
+        },
+        "skillCategory": {
+            "type": "enum",
+            "options": ["developpement", "noCode", "commerce", "graphisme", "bureautique", "marketing", "gestionProjet", "langues", "general"],
+            "displayAsLabel": true
+        },
+        "description": {
+            "type": "text"
+        },
+        "active": {
+            "type": "bool",
+            "default": true
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "modifiedBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "assignedUser": {
+            "type": "link",
+            "required": false,
+            "view": "views/fields/assigned-user"
+        },
+        "teams": {
+            "type": "linkMultiple",
+            "view": "views/fields/teams"
+        },
+        "contacts": {
+            "type": "linkMultiple"
+        },
+        "formations": {
+            "type": "linkMultiple"
+        },
+        "opportunities": {
+            "type": "linkMultiple"
+        }
+    },
+    "links": {
+        "createdBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "modifiedBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "assignedUser": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "teams": {
+            "type": "hasMany",
+            "entity": "Team",
+            "relationName": "entityTeam",
+            "layoutRelationshipsDisabled": true
+        },
+        "meetings": {
+            "type": "hasMany",
+            "entity": "Meeting",
+            "foreign": "parent"
+        },
+        "calls": {
+            "type": "hasMany",
+            "entity": "Call",
+            "foreign": "parent"
+        },
+        "tasks": {
+            "type": "hasChildren",
+            "entity": "Task",
+            "foreign": "parent"
+        },
+        "emails": {
+            "type": "hasChildren",
+            "entity": "Email",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "contacts": {
+            "type": "hasMany",
+            "entity": "Contact",
+            "foreign": "skills",
+            "relationName": "contactSkill"
+        },
+        "formations": {
+            "type": "hasMany",
+            "entity": "Formation",
+            "foreign": "skills",
+            "relationName": "formationSkill"
+        },
+        "opportunities": {
+            "type": "hasMany",
+            "entity": "Opportunity",
+            "foreign": "skills",
+            "relationName": "opportunitySkill"
+        }
+    },
+    "indexes": {
+        "assignedUser": {
+            "columns": ["assignedUserId", "deleted"]
+        },
+        "createdAt": {
+            "columns": ["createdAt"]
+        }
+    },
+    "collection": {
+        "orderBy": "name",
+        "order": "asc"
+    }
+}

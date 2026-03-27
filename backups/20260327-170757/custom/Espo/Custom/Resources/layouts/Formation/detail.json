@@ -1,0 +1,105 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "codeFormation"
+                },
+                {
+                    "name": "active"
+                }
+            ],
+            [
+                {
+                    "name": "typeFormation"
+                },
+                {
+                    "name": "niveau"
+                }
+            ],
+            [
+                {
+                    "name": "duree"
+                },
+                {
+                    "name": "rythme"
+                },
+                {
+                    "name": "modaliteFormation"
+                }
+            ],
+            [
+                {
+                    "name": "rncpTitre"
+                },
+                {
+                    "name": "rncpCode"
+                },
+                {
+                    "name": "codeNsf"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "🎓 Catalogue"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "filizDegreeId"
+                },
+                {
+                    "name": "modifierInformationsFiliz"
+                }
+            ]
+        ],
+        "style": "default",
+        "name": "filizReferencePanel",
+        "label": "🔗 Filiz"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "prerequis"
+                }
+            ],
+            [
+                {
+                    "name": "competencesEntree"
+                }
+            ],
+            [
+                {
+                    "name": "competencesSortie"
+                }
+            ],
+            [
+                {
+                    "name": "publicCible"
+                }
+            ]
+        ],
+        "style": "default",
+        "label": "🧠 Compétences"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "createdAt"
+                },
+                {
+                    "name": "modifiedAt"
+                }
+            ]
+        ],
+        "style": "default",
+        "name": "systemPanel",
+        "label": "🗂️ Système"
+    }
+]

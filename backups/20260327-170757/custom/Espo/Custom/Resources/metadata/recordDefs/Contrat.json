@@ -1,0 +1,17 @@
+{
+    "beforeCreateHookClassNameList": [
+        "Espo\\Custom\\Classes\\RecordHooks\\ContratName\\BeforeSave"
+    ],
+    "beforeUpdateHookClassNameList": [
+        "Espo\\Custom\\Classes\\RecordHooks\\ContratName\\BeforeSave"
+    ],
+    "afterCreateHookClassNameList": [
+        "Espo\\Custom\\Classes\\RecordHooks\\Contrat\\AfterSave"
+    ],
+    "afterUpdateHookClassNameList": [
+        "Espo\\Custom\\Classes\\RecordHooks\\Contrat\\AfterSave"
+    ],
+    "afterDeleteHookClassNameList": [
+        "Espo\\Custom\\Classes\\RecordHooks\\Contrat\\AfterDelete"
+    ]
+}
