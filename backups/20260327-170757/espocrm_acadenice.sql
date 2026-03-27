@@ -267,7 +267,7 @@ CREATE TABLE `action_history_record` (
   KEY `IDX_USER_ID` (`user_id`),
   KEY `IDX_AUTH_TOKEN_ID` (`auth_token_id`),
   KEY `IDX_AUTH_LOG_RECORD_ID` (`auth_log_record_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -280,7 +280,12 @@ LOCK TABLES `action_history_record` WRITE;
 INSERT INTO `action_history_record` VALUES
 ('69c49a05f1784aa7a',0,1,'Attachment',NULL,'create','2026-03-26 02:29:25','127.0.0.1','69c49a05eaa2af6ee','69c481717a2fce139','69c482b67a852e220','69c482b67abfb0122'),
 ('69c49a19850ac41dc',0,2,'Attachment',NULL,'delete','2026-03-26 02:29:45','127.0.0.1','69c49a05eaa2af6ee','69c481717a2fce139','69c482b67a852e220','69c482b67abfb0122'),
-('69c49a82e5ef13169',0,3,'Attachment',NULL,'create','2026-03-26 02:31:30','127.0.0.1','69c49a82e4097b2ac','69c481717a2fce139','69c482b67a852e220','69c482b67abfb0122');
+('69c49a82e5ef13169',0,3,'Attachment',NULL,'create','2026-03-26 02:31:30','127.0.0.1','69c49a82e4097b2ac','69c481717a2fce139','69c482b67a852e220','69c482b67abfb0122'),
+('69c6c194643e22824',0,4,'Skill',NULL,'read','2026-03-27 17:42:44','127.0.0.1','skv1000000000084','69c481717a2fce139','69c482b67a852e220','69c482b67abfb0122'),
+('69c6c391e96c3efd5',0,5,'Skill',NULL,'read','2026-03-27 17:51:13','127.0.0.1','skv1000000000032','69c481717a2fce139','69c482b67a852e220','69c482b67abfb0122'),
+('69c6c3beadb85f089',0,6,'Skill',NULL,'read','2026-03-27 17:51:58','127.0.0.1','skv1000000000032','69c481717a2fce139','69c482b67a852e220','69c482b67abfb0122'),
+('69c6c3fe96836367a',0,7,'Skill',NULL,'read','2026-03-27 17:53:02','127.0.0.1','skv1000000000017','69c481717a2fce139','69c482b67a852e220','69c482b67abfb0122'),
+('69c6c411e3941f438',0,8,'Skill',NULL,'read','2026-03-27 17:53:21','127.0.0.1','skv1000000000017','69c481717a2fce139','69c482b67a852e220','69c482b67abfb0122');
 /*!40000 ALTER TABLE `action_history_record` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
@@ -558,7 +563,7 @@ SET @OLD_AUTOCOMMIT=@@AUTOCOMMIT, @@AUTOCOMMIT=0;
 LOCK TABLES `auth_token` WRITE;
 /*!40000 ALTER TABLE `auth_token` DISABLE KEYS */;
 INSERT INTO `auth_token` VALUES
-('69c482b67a852e220',0,'fcc006b9319872027f12deca4231972f','$2y$12$vH3dNBGftUS/bLz1GPsr4.tHNp4COlg0DIJYzCa9MY8VVPmdun1aS','d266beb1150867bf4f392c24560239ed','127.0.0.1',1,'2026-03-27 16:09:39','2026-03-26 00:49:58','2026-03-27 16:09:39','69c481717a2fce139',NULL);
+('69c482b67a852e220',0,'fcc006b9319872027f12deca4231972f','$2y$12$vH3dNBGftUS/bLz1GPsr4.tHNp4COlg0DIJYzCa9MY8VVPmdun1aS','d266beb1150867bf4f392c24560239ed','127.0.0.1',1,'2026-03-27 17:55:36','2026-03-26 00:49:58','2026-03-27 17:55:36','69c481717a2fce139',NULL);
 /*!40000 ALTER TABLE `auth_token` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
@@ -4885,6 +4890,98 @@ CREATE TABLE `skill` (
 SET @OLD_AUTOCOMMIT=@@AUTOCOMMIT, @@AUTOCOMMIT=0;
 LOCK TABLES `skill` WRITE;
 /*!40000 ALTER TABLE `skill` DISABLE KEYS */;
+INSERT INTO `skill` VALUES
+('skv1000000000001','HTML',0,'technique','developpement','Structure de pages web.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000002','CSS',0,'technique','developpement','Mise en forme de pages web.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000003','JavaScript',0,'technique','developpement','Développement d\'interactions web.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000004','TypeScript',0,'technique','developpement','Développement JavaScript typé.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000005','PHP',0,'technique','developpement','Développement back-end PHP.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000006','SQL',0,'technique','developpement','Manipulation de bases de données.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000007','API REST',0,'technique','developpement','Utilisation et conception d\'API.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000008','Responsive design',0,'technique','developpement','Conception adaptée mobile et desktop.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000009','Intégration web',0,'metier','developpement','Intégration de maquettes en pages web.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000010','Développement front-end',0,'metier','developpement','Développement de la partie visible d\'une application.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000011','Développement back-end',0,'metier','developpement','Développement côté serveur.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000012','WordPress',0,'logiciel','developpement','Création et gestion de sites WordPress.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000013','React',0,'logiciel','developpement','Développement d\'interfaces React.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000014','Node.js',0,'logiciel','developpement','Développement JavaScript côté serveur.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000015','Git',0,'logiciel','developpement','Gestion de versions.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000016','GitHub',0,'logiciel','developpement','Collaboration sur dépôts GitHub.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000017','Airtable',0,'logiciel','noCode','Base de données et automatisations no-code.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000018','Notion',0,'logiciel','noCode','Organisation et documentation collaborative.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000019','Make',0,'logiciel','noCode','Automatisation de workflows.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000020','Zapier',0,'logiciel','noCode','Automatisation entre outils.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000021','Webflow',0,'logiciel','noCode','Création de sites no-code.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000022','Bubble',0,'logiciel','noCode','Création d\'applications no-code.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000023','Glide',0,'logiciel','noCode','Création d\'applications no-code mobiles.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000024','Softr',0,'logiciel','noCode','Interfaces no-code à partir de données.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000025','Automatisation de processus',0,'metier','noCode','Optimisation et automatisation de tâches.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000026','Conception de workflows',0,'metier','noCode','Conception de processus automatisés.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000027','Gestion de bases de données no-code',0,'metier','noCode','Structuration et exploitation de données no-code.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000028','Figma',0,'logiciel','graphisme','Maquettage et design d\'interfaces.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000029','Canva',0,'logiciel','graphisme','Création de supports visuels.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000030','Adobe Photoshop',0,'logiciel','graphisme','Retouche et création graphique.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000031','Adobe Illustrator',0,'logiciel','graphisme','Création vectorielle.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000032','Adobe InDesign',0,'logiciel','graphisme','Mise en page de documents.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000033','UX design',0,'metier','graphisme','Conception d\'expériences utilisateur.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000034','UI design',0,'metier','graphisme','Conception d\'interfaces utilisateur.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000035','Wireframing',0,'metier','graphisme','Schématisation de parcours et interfaces.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000036','Prototypage',0,'metier','graphisme','Création de prototypes interactifs.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000037','Identité visuelle',0,'metier','graphisme','Création d\'univers graphiques.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000038','Création de supports de communication',0,'metier','graphisme','Création de visuels print et digital.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000039','Réseaux sociaux',0,'metier','marketing','Gestion de présence sur réseaux sociaux.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000040','Community management',0,'metier','marketing','Animation de communautés en ligne.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000041','Rédaction web',0,'metier','marketing','Production de contenus web.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000042','SEO',0,'metier','marketing','Référencement naturel.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000043','SEA',0,'metier','marketing','Référencement payant.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000044','Email marketing',0,'metier','marketing','Campagnes d\'emailing.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000045','Création de contenu',0,'metier','marketing','Création de contenus éditoriaux et visuels.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000046','Communication digitale',0,'metier','marketing','Communication en ligne multi-canal.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000047','Meta Ads',0,'logiciel','marketing','Publicités sur l\'écosystème Meta.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000048','Google Ads',0,'logiciel','marketing','Publicités Google.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000049','Google Analytics',0,'logiciel','marketing','Analyse de trafic web.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000050','Stratégie marketing',0,'metier','marketing','Définition et pilotage d\'actions marketing.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000051','Prospection commerciale',0,'metier','commerce','Recherche et approche de prospects.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000052','Vente B2B',0,'metier','commerce','Vente en environnement professionnel.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000053','Négociation commerciale',0,'metier','commerce','Conduite de négociations commerciales.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000054','Relation client',0,'metier','commerce','Suivi et fidélisation client.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000055','Qualification de leads',0,'metier','commerce','Qualification de prospects commerciaux.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000056','Suivi commercial',0,'metier','commerce','Suivi des opportunités et relances.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000057','Prise de rendez-vous',0,'metier','commerce','Organisation de rendez-vous commerciaux.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000058','Développement commercial',0,'metier','commerce','Développement d\'activité commerciale.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000059','CRM',0,'logiciel','commerce','Utilisation d\'outils de relation client.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000060','Gestion de portefeuille client',0,'metier','commerce','Suivi d\'un portefeuille d\'entreprises ou clients.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000061','Excel',0,'logiciel','bureautique','Utilisation avancée d\'Excel.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000062','Word',0,'logiciel','bureautique','Utilisation de Word.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000063','PowerPoint',0,'logiciel','bureautique','Création de présentations.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000064','Google Sheets',0,'logiciel','bureautique','Tableurs collaboratifs Google.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000065','Google Docs',0,'logiciel','bureautique','Documents collaboratifs Google.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000066','Reporting',0,'metier','bureautique','Production de tableaux de suivi.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000067','Saisie de données',0,'metier','bureautique','Saisie et mise à jour d\'informations.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000068','Gestion administrative',0,'metier','bureautique','Gestion de tâches administratives.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000069','Gestion de projet',0,'metier','gestionProjet','Pilotage de projets.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000070','Méthode agile',0,'metier','gestionProjet','Travail en méthode agile.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000071','Scrum',0,'metier','gestionProjet','Cadre de travail Scrum.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000072','Travail en équipe',0,'softSkill','general','Collaboration avec une équipe.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000073','Gestion des priorités',0,'softSkill','gestionProjet','Capacité à hiérarchiser les tâches.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000074','Résolution de problèmes',0,'softSkill','general','Analyse et résolution de problèmes.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000075','Veille',0,'softSkill','general','Veille métier et technologique.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000076','Français',0,'langue','langues','Maîtrise du français.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000077','Anglais',0,'langue','langues','Maîtrise de l\'anglais.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000078','Italien',0,'langue','langues','Maîtrise de l\'italien.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000079','Espagnol',0,'langue','langues','Maîtrise de l\'espagnol.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000080','Russe',0,'langue','langues','Maîtrise du russe.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000081','Communication orale',0,'softSkill','general','Expression orale claire.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000082','Communication écrite',0,'softSkill','general','Expression écrite claire.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000083','Rigueur',0,'softSkill','general','Fiabilité et précision dans le travail.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000084','Adaptabilité',0,'softSkill','general','Capacité d\'adaptation.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000085','Créativité',0,'softSkill','general','Capacité à proposer des idées.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000086','Esprit d\'analyse',0,'softSkill','general','Capacité d\'analyse.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000087','Sens du service',0,'softSkill','general','Orientation client et service.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000088','Curiosité',0,'softSkill','general','Envie d\'apprendre et d\'explorer.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000089','Prise d\'initiative',0,'softSkill','general','Capacité à agir de manière autonome.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000090','Écoute active',0,'softSkill','general','Capacité à écouter et reformuler.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139'),
+('skv1000000000091','Autonomie',0,'softSkill','general','Capacité à avancer de façon autonome.',1,'2026-03-27 18:40:29','2026-03-27 18:40:29','69c481717a2fce139','69c481717a2fce139','69c481717a2fce139');
 /*!40000 ALTER TABLE `skill` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
@@ -5916,4 +6013,4 @@ SET AUTOCOMMIT=@OLD_AUTOCOMMIT;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2026-03-27 17:09:44
+-- Dump completed on 2026-03-27 18:55:39

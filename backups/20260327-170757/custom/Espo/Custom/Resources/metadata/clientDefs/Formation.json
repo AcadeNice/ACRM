@@ -6,29 +6,35 @@
         "detail": [
             {
                 "name": "activities",
-                "reference": "activities"
+                "reference": "activities",
+                "disabled": true
             },
             {
                 "name": "history",
-                "reference": "history"
+                "reference": "history",
+                "disabled": true
             },
             {
                 "name": "tasks",
-                "reference": "tasks"
+                "reference": "tasks",
+                "disabled": true
             }
         ],
         "detailSmall": [
             {
                 "name": "activities",
-                "reference": "activities"
+                "reference": "activities",
+                "disabled": true
             },
             {
                 "name": "history",
-                "reference": "history"
+                "reference": "history",
+                "disabled": true
             },
             {
                 "name": "tasks",
-                "reference": "tasks"
+                "reference": "tasks",
+                "disabled": true
             }
         ]
     },
