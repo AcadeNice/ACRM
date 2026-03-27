@@ -39,6 +39,8 @@ Il a été structuré pour versionner seulement ce qui est utile à partager et 
 
 ```text
 .
+├── docs/
+│   └── CONTEXTE_PROJET.md
 ├── backups/
 │   └── 20260327-170757/
 │       ├── README.md
@@ -62,6 +64,12 @@ Le but est de :
 Le backup actuellement prêt se trouve dans :
 
 - [backups/20260327-170757](/Users/ludovicrubio/Documents/New%20project/espocrm-test/backups/20260327-170757)
+
+### Mémoire projet
+
+Pour reprendre le travail sans devoir réexpliquer toute la logique métier et technique, utiliser aussi :
+
+- [docs/CONTEXTE_PROJET.md](/Users/ludovicrubio/Documents/New%20project/espocrm-test/docs/CONTEXTE_PROJET.md)
 
 ### Note importante
 
