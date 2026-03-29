@@ -701,7 +701,624 @@ Cela permet :
 
 ---
 
-# 9. Comment travailler proprement au quotidien ?
+# 9. Marketing - Les bases
+
+## À quoi sert l'onglet Marketing ?
+
+L'onglet `Marketing` sert à organiser des actions de communication.
+
+On l'utilise quand on veut :
+
+- regrouper des contacts ;
+- préparer un envoi ;
+- suivre une campagne ;
+- garder une logique claire entre une audience et une action.
+
+En version très simple :
+
+- `Liste de diffusion` = le groupe de personnes ciblées ;
+- `Campagne` = l'action menée vers ce groupe.
+
+## Que trouve-t-on dans cet onglet ?
+
+En général, vous y trouverez surtout :
+
+- les `Campagnes` ;
+- les `Listes de diffusion`.
+
+Ces deux éléments fonctionnent ensemble.
+
+## À quoi cela peut servir chez AcadéNice ?
+
+Exemples simples :
+
+- inviter des candidats à une réunion d'information ;
+- relancer des entreprises ;
+- envoyer une information à des alumni ;
+- préparer une communication à un groupe précis de contacts.
+
+## Ce qu'il faut retenir
+
+- `Marketing` = communication organisée ;
+- `Liste de diffusion` = les personnes ciblées ;
+- `Campagne` = l'action de communication.
+
+---
+
+# 10. Marketing - Campagnes
+
+## Qu'est-ce qu'une campagne ?
+
+Une `campagne` représente une action de communication.
+
+Exemples :
+
+- `Invitation JPO Avril 2026`
+- `Relance entreprises alternance`
+- `Information rentrée candidats admis`
+
+## À quoi sert la fiche Campagne ?
+
+La fiche campagne sert à donner un cadre clair à une action.
+
+Elle permet de savoir :
+
+- quel est le sujet de l'action ;
+- à qui elle s'adresse ;
+- quand elle est menée ;
+- si elle est encore en cours ou terminée.
+
+## Comment la comprendre simplement ?
+
+Une campagne ne contient pas forcément les personnes directement.
+
+Son rôle est surtout de représenter :
+
+- une intention ;
+- une période ;
+- un objectif de communication.
+
+Les personnes visées sont souvent regroupées dans une ou plusieurs listes de diffusion.
+
+## Exemple concret
+
+Si AcadéNice organise une communication pour la rentrée :
+
+- la `campagne` peut s'appeler `Information rentrée candidats admis` ;
+- les `listes de diffusion` peuvent contenir les bons contacts selon le besoin.
+
+## Bonne pratique
+
+Quand vous créez une campagne :
+
+- donnez-lui un nom clair ;
+- utilisez une logique simple ;
+- évitez les doublons ;
+- créez une campagne seulement si une vraie action de communication existe.
+
+---
+
+# 11. Marketing - Listes de diffusion
+
+## Qu'est-ce qu'une liste de diffusion ?
+
+Une `liste de diffusion` est une liste de contacts regroupés pour une même communication.
+
+Exemples :
+
+- candidats à relancer ;
+- alumni à contacter ;
+- entreprises partenaires à informer ;
+- candidats à inviter à un événement.
+
+## À quoi sert la fiche Liste de diffusion ?
+
+Elle sert à définir **qui fait partie du groupe**.
+
+Elle ne décrit pas l'action.
+Elle décrit les personnes ciblées.
+
+## Comment la comprendre simplement ?
+
+Si vous devez envoyer la même information à plusieurs personnes, la liste de diffusion sert à les rassembler au même endroit.
+
+En version très simple :
+
+- `Liste de diffusion` = qui reçoit ;
+- `Campagne` = pourquoi on envoie.
+
+## Exemple concret
+
+Si vous voulez inviter plusieurs candidats à une réunion :
+
+- vous créez une liste de diffusion `Candidats à inviter - Réunion info` ;
+- vous y regroupez les bons contacts ;
+- ensuite cette liste peut être utilisée dans une campagne.
+
+## Bonne pratique
+
+Quand vous créez une liste de diffusion :
+
+- utilisez un nom clair ;
+- ne mélangez pas plusieurs logiques dans une seule liste ;
+- vérifiez les doublons ;
+- gardez une liste facile à comprendre pour un collègue.
+
+---
+
+# 12. Documents
+
+## À quoi sert l'onglet Documents ?
+
+L'onglet `Documents` sert à stocker et retrouver des fichiers dans le CRM.
+
+Exemples :
+
+- un document administratif ;
+- un modèle ;
+- un contrat ;
+- une pièce utile à partager ;
+- un fichier de référence pour l'équipe.
+
+## À quoi sert une fiche Document ?
+
+Une fiche `Document` sert à donner un cadre clair à un fichier.
+
+Elle permet de savoir :
+
+- quel est le nom du document ;
+- quel fichier est associé ;
+- quel est son statut ;
+- à quelle date il a été publié ;
+- si le document est encore actif ou non.
+
+## Les champs principaux
+
+| Champ | À quoi il sert | Comment l'utiliser |
+|---|---|---|
+| `Nom` | Nom du document | Mettre un nom clair et compréhensible |
+| `Fichier` | Fichier réellement stocké | Ajouter le bon fichier |
+| `Statut` | État du document | Brouillon, actif, annulé, expiré |
+| `Date de publication` | Date de mise à disposition | Vérifier qu'elle est correcte |
+| `Date d'expiration` | Date de fin de validité si nécessaire | À renseigner seulement si utile |
+| `Dossier` | Classement du document | Utiliser si un rangement existe |
+| `Description` | Explication courte | Ajouter une précision si besoin |
+
+## Comment comprendre cette page simplement ?
+
+Le document est la **fiche de rangement du fichier**.
+
+Le fichier seul ne suffit pas toujours.
+La fiche permet de :
+
+- le retrouver ;
+- le classer ;
+- comprendre à quoi il sert ;
+- savoir s'il est encore valable.
+
+## Exemple concret
+
+Si vous devez ajouter un document utile à l'équipe :
+
+1. créez une fiche `Document` ;
+2. donnez-lui un nom clair ;
+3. ajoutez le fichier ;
+4. choisissez le bon statut ;
+5. ajoutez une description si cela aide à comprendre son usage.
+
+## Bonne pratique
+
+Quand vous créez un document :
+
+- utilisez un nom simple ;
+- évitez les doublons ;
+- vérifiez que vous ajoutez la bonne version ;
+- gardez une logique de classement facile à reprendre par un collègue.
+
+---
+
+# 13. Activités - Emails
+
+## À quoi sert l'onglet Emails ?
+
+L'onglet `Emails` sert à suivre les emails envoyés ou reçus dans le CRM.
+
+Il permet de :
+
+- retrouver un échange ;
+- voir qui a envoyé quoi ;
+- garder une trace des communications importantes ;
+- rattacher un email à une fiche si nécessaire.
+
+## Comment comprendre cette page simplement ?
+
+Un email dans Espo est une **trace d'échange**.
+
+Cela permet à l'équipe de voir qu'un message existe, même si ce n'est pas elle qui l'a envoyé.
+
+## À quoi faut-il faire attention ?
+
+Quand vous regardez un email, vérifiez surtout :
+
+- l'objet ;
+- l'expéditeur ;
+- le destinataire ;
+- la date ;
+- le contenu utile.
+
+## Bonne pratique
+
+- utilisez l'onglet `Emails` pour retrouver un échange ;
+- ne créez pas d'email juste pour du rangement ;
+- rattachez un email à une fiche seulement si cela aide vraiment au suivi.
+
+---
+
+# 14. Activités - Tâches
+
+## À quoi sert l'onglet Tâches ?
+
+L'onglet `Tâches` sert à suivre ce qu'il reste à faire.
+
+Exemples :
+
+- rappeler un candidat ;
+- relancer une entreprise ;
+- vérifier un dossier ;
+- envoyer un document ;
+- préparer un entretien.
+
+## Comment comprendre cette page simplement ?
+
+Une tâche est une **action à réaliser**.
+
+Elle sert à ne pas oublier une action importante.
+
+## Les informations utiles
+
+Quand vous ouvrez une tâche, regardez surtout :
+
+- le nom de la tâche ;
+- la personne responsable ;
+- la date d'échéance ;
+- le statut ;
+- le lien éventuel avec une fiche.
+
+## Bonne pratique
+
+- créez une tâche quand une action précise doit être faite ;
+- utilisez un nom clair ;
+- mettez à jour le statut quand l'action est terminée ;
+- évitez de laisser des tâches anciennes sans suivi.
+
+---
+
+# 15. Activités - Appels
+
+## À quoi sert l'onglet Appels ?
+
+L'onglet `Appels` sert à garder une trace des appels téléphoniques.
+
+Exemples :
+
+- appel à un candidat ;
+- appel à une entreprise ;
+- appel de relance ;
+- échange téléphonique important.
+
+## Comment comprendre cette page simplement ?
+
+Une fiche appel sert à savoir :
+
+- qu'un appel a eu lieu ou est prévu ;
+- avec qui ;
+- quand ;
+- et pourquoi.
+
+## Quand l'utiliser ?
+
+Utilisez cette page quand l'appel mérite d'être gardé dans le suivi.
+
+Par exemple :
+
+- un appel de qualification ;
+- un échange important avec une entreprise ;
+- un point de suivi sur une candidature.
+
+## Bonne pratique
+
+- donnez un titre simple à l'appel ;
+- rattachez-le à la bonne fiche si nécessaire ;
+- ajoutez un résumé utile si cela aide le collègue qui reprendra le dossier.
+
+---
+
+# 16. Activités - Rendez-vous
+
+## À quoi sert l'onglet Réunions ?
+
+L'onglet `Réunions` sert à suivre les rendez-vous et réunions planifiés.
+
+Exemples :
+
+- entretien candidat ;
+- rendez-vous entreprise ;
+- réunion interne ;
+- point de suivi.
+
+## Comment comprendre cette page simplement ?
+
+Une réunion est un **événement prévu dans le temps**.
+
+Elle sert à savoir :
+
+- qui participe ;
+- quand a lieu le rendez-vous ;
+- et quel sujet est traité.
+
+## Quand l'utiliser ?
+
+Utilisez une réunion quand un rendez-vous doit être planifié et suivi.
+
+Cela évite de garder l'information seulement dans un agenda personnel.
+
+## Bonne pratique
+
+- donnez un titre clair ;
+- renseignez la bonne date ;
+- rattachez la réunion à la bonne fiche si besoin ;
+- mettez à jour les informations si le rendez-vous change.
+
+---
+
+# 17. Activités - Calendrier
+
+## À quoi sert l'onglet Calendrier ?
+
+L'onglet `Calendrier` sert à voir dans le temps :
+
+- les réunions ;
+- les appels ;
+- certaines tâches selon le paramétrage.
+
+## Comment comprendre cette page simplement ?
+
+Le calendrier ne remplace pas les fiches.
+
+Il sert surtout à avoir une **vue dans le temps** des actions prévues.
+
+## À quoi cela sert au quotidien ?
+
+Le calendrier permet de :
+
+- voir ce qui est prévu aujourd'hui ;
+- repérer les rendez-vous à venir ;
+- vérifier qu'il n'y a pas de conflit ;
+- mieux organiser sa journée ou sa semaine.
+
+## Bonne pratique
+
+- utilisez le calendrier pour piloter votre temps ;
+- utilisez les fiches `Réunion`, `Appel` et `Tâche` pour stocker l'information détaillée ;
+- ne considérez pas le calendrier comme un simple affichage : il dépend de la qualité des fiches créées.
+
+---
+
+# 18. Administration - Utilisateurs
+
+## À quoi sert l'onglet Utilisateurs ?
+
+L'onglet `Utilisateurs` sert à voir les personnes qui ont un accès au CRM.
+
+Chaque utilisateur représente un compte de connexion.
+
+Cela permet de savoir :
+
+- qui peut se connecter ;
+- qui travaille dans le CRM ;
+- à qui une fiche ou une tâche peut être assignée.
+
+## Comment comprendre cette page simplement ?
+
+Un `Utilisateur` n'est pas un contact candidat ou entreprise.
+
+C'est un **compte interne** utilisé pour travailler dans l'outil.
+
+Exemples :
+
+- un salarié AcadéNice ;
+- un alternant interne ;
+- un responsable ;
+- un administrateur.
+
+## À quoi faut-il faire attention ?
+
+Quand vous consultez cette page, regardez surtout :
+
+- le nom de l'utilisateur ;
+- son statut actif ou non ;
+- son équipe ;
+- ses droits selon son rôle.
+
+## Bonne pratique
+
+- ne créez pas un utilisateur si la personne n'a pas besoin d'accéder au CRM ;
+- ne confondez pas `Utilisateur` et `Contact` ;
+- gardez des comptes propres et clairement nommés.
+
+---
+
+# 19. Administration - Équipes
+
+## À quoi sert l'onglet Équipes ?
+
+L'onglet `Équipes` sert à regrouper des utilisateurs.
+
+Une équipe permet d'organiser le travail et la visibilité.
+
+## Comment comprendre cette page simplement ?
+
+Une équipe représente un **groupe interne de travail**.
+
+Elle peut servir à :
+
+- partager certaines fiches ;
+- mieux répartir le suivi ;
+- structurer l'organisation interne dans le CRM.
+
+## Exemple simple
+
+Une équipe peut représenter :
+
+- l'équipe commerciale ;
+- l'équipe pédagogique ;
+- l'équipe administrative ;
+- une équipe projet.
+
+## Bonne pratique
+
+- utilisez les équipes pour organiser le travail collectif ;
+- ne créez pas trop d'équipes inutiles ;
+- gardez des noms clairs et faciles à comprendre.
+
+---
+
+# 20. Administration - Calendriers des jours travaillés
+
+## À quoi sert cet onglet ?
+
+L'onglet `Calendriers des jours travaillés` sert à définir les jours ouvrés et non ouvrés.
+
+Il permet au CRM de mieux comprendre :
+
+- les jours de travail ;
+- les jours fériés ;
+- les périodes non travaillées.
+
+## Comment comprendre cette page simplement ?
+
+Ce n'est pas un agenda personnel.
+
+C'est un **cadre de calendrier** utilisé par le système pour mieux gérer certaines logiques de temps.
+
+## À quoi cela peut servir ?
+
+Cela peut être utile pour :
+
+- les calculs de délai ;
+- certains rappels ;
+- une meilleure lecture de l'activité dans le temps.
+
+## Bonne pratique
+
+- utilisez cet onglet seulement si vous savez pourquoi vous le consultez ;
+- gardez une logique simple ;
+- ne modifiez pas ces calendriers sans consigne claire.
+
+---
+
+# 21. Administration - Modèles d'email
+
+## À quoi sert l'onglet Modèles d'email ?
+
+L'onglet `Modèles d'email` sert à enregistrer des emails types.
+
+Cela permet de réutiliser facilement un message déjà préparé.
+
+## Comment comprendre cette page simplement ?
+
+Un modèle d'email est un **texte prêt à l'emploi**.
+
+Exemples :
+
+- réponse à un candidat ;
+- relance entreprise ;
+- envoi d'information ;
+- accusé de réception.
+
+## À quoi cela sert au quotidien ?
+
+Cela permet :
+
+- de gagner du temps ;
+- de garder une qualité d'écriture homogène ;
+- d'éviter de réécrire les mêmes messages.
+
+## Bonne pratique
+
+- utilisez un objet clair ;
+- gardez un ton professionnel ;
+- mettez à jour les modèles si les pratiques changent ;
+- évitez de multiplier les modèles très proches.
+
+---
+
+# 22. Administration - PDF Templates
+
+## À quoi sert l'onglet PDF Templates ?
+
+L'onglet `PDF Templates` sert à gérer des modèles de documents PDF.
+
+Ces modèles permettent de produire des documents dans une forme standardisée.
+
+## Comment comprendre cette page simplement ?
+
+Un PDF Template est un **gabarit de document**.
+
+Il sert à préparer un rendu identique pour plusieurs documents du même type.
+
+## Exemples possibles
+
+- document type ;
+- export formalisé ;
+- document administratif ;
+- mise en page répétée.
+
+## Bonne pratique
+
+- considérez ces modèles comme des outils système ;
+- ne les modifiez pas sans besoin clair ;
+- utilisez-les surtout si vous savez qu'un document PDF standard doit être généré.
+
+---
+
+# 23. Administration - Importation
+
+## À quoi sert l'onglet Importation ?
+
+L'onglet `Importation` sert à faire entrer des données dans le CRM en lot.
+
+Exemples :
+
+- importer plusieurs contacts ;
+- importer plusieurs organisations ;
+- ajouter un jeu de données préparé dans un fichier.
+
+## Comment comprendre cette page simplement ?
+
+L'importation sert quand on veut créer ou mettre à jour **beaucoup de fiches à la fois**.
+
+Ce n'est pas utile pour une saisie au cas par cas.
+
+## À quoi faut-il faire attention ?
+
+Un import mal préparé peut créer :
+
+- des doublons ;
+- des erreurs de données ;
+- des fiches incomplètes ;
+- des incohérences.
+
+## Bonne pratique
+
+- importer seulement si le fichier est propre ;
+- vérifier les colonnes avant l'import ;
+- éviter d'importer sans contrôle ;
+- demander validation si le fichier a un doute ou un impact important.
+
+---
+
+# 24. Comment travailler proprement au quotidien ?
 
 ## Quand vous recevez une nouvelle entreprise
 
@@ -741,7 +1358,7 @@ Cela permet :
 
 ---
 
-# 10. Ce qu'il faut éviter
+# 25. Ce qu'il faut éviter
 
 ## Les erreurs les plus fréquentes
 
@@ -763,7 +1380,7 @@ Cela permet :
 
 ---
 
-# 11. Questions fréquentes
+# 26. Questions fréquentes
 
 ## Je vois des champs techniques ou des informations Filiz, dois-je les remplir ?
 
@@ -792,7 +1409,7 @@ Il ne remplace pas les champs de suivi.
 
 ---
 
-# 12. Résumé ultra-court
+# 27. Résumé ultra-court
 
 ## Si vous retenez seulement l'essentiel
 
@@ -815,7 +1432,7 @@ Et surtout :
 
 ---
 
-# 13. Conclusion
+# 28. Conclusion
 
 Le CRM doit devenir un outil simple de travail collectif.
 
