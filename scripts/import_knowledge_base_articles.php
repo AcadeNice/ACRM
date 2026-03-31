@@ -493,15 +493,22 @@ try {
             'legacyTitles' => ['Importation'],
         ],
         [
-            'title' => "0.2 - Guide d'utilisation - Travailler au quotidien",
+            'title' => '5.7 - Administration - Rôles et droits',
             'categoryId' => $rootId,
             'order' => 250,
+            'markdown' => $sections['24. Administration - Rôles et droits'] ?? '',
+            'legacyTitles' => ['Rôles et droits'],
+        ],
+        [
+            'title' => "0.2 - Guide d'utilisation - Travailler au quotidien",
+            'categoryId' => $rootId,
+            'order' => 260,
             'markdown' => buildCombinedArticle([
-                '24. Comment travailler proprement au quotidien ?',
-                '25. Ce qu\'il faut éviter',
-                '26. Questions fréquentes',
-                '27. Résumé ultra-court',
-                '28. Conclusion',
+                '25. Comment travailler proprement au quotidien ?',
+                '26. Ce qu\'il faut éviter',
+                '27. Questions fréquentes',
+                '28. Résumé ultra-court',
+                '29. Conclusion',
             ], $sections),
             'legacyTitles' => [
                 "Guide d'utilisation - Travailler au quotidien",
@@ -556,6 +563,7 @@ try {
         'Modèles d\'email',
         'PDF Templates',
         'Importation',
+        'Rôles et droits',
     ]);
 
     $pdo->commit();

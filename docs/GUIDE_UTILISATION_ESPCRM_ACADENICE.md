@@ -1318,7 +1318,203 @@ Un import mal préparé peut créer :
 
 ---
 
-# 24. Comment travailler proprement au quotidien ?
+# 24. Administration - Rôles et droits
+
+## À quoi sert cette logique ?
+
+Dans EspoCRM, tous les utilisateurs n'ont pas besoin d'avoir les mêmes droits.
+
+La logique des rôles sert à :
+
+- donner à chacun l'accès utile pour travailler ;
+- éviter les erreurs ;
+- protéger les données sensibles ;
+- garder un CRM simple à utiliser.
+
+## Principe simple
+
+Un `rôle` définit ce qu'une personne peut faire dans le CRM.
+
+Exemples :
+
+- voir une fiche ;
+- créer une fiche ;
+- modifier une fiche ;
+- supprimer une fiche.
+
+Dans AcadéNice, les rôles sont définis par type d'usage, pas par nom de personne.
+
+## Les rôles retenus
+
+### `Admin CRM`
+
+Ce rôle a tous les droits.
+
+Il peut :
+
+- voir ;
+- créer ;
+- modifier ;
+- supprimer ;
+- configurer le CRM ;
+- gérer les imports et exports ;
+- intervenir partout ;
+- accéder aux comptes email, comptes externes, tickets, OpenAPI et webhooks.
+
+### `Recrutement`
+
+Ce rôle gère surtout :
+
+- les contacts ;
+- les organisations ;
+- les offres ;
+- les candidatures ;
+- les contrats ;
+- les compétences si une nouvelle compétence doit être ajoutée au référentiel ;
+- les tickets entrants ;
+- les comptes email.
+
+### `Assistance pédagogique`
+
+Ce rôle aide au suivi opérationnel.
+
+Il peut intervenir sur :
+
+- les contacts ;
+- les organisations ;
+- les candidatures ;
+- les contrats ;
+- une partie des offres ;
+- les formations et promotions en création quand il faut compléter les référentiels ;
+- les compétences en création quand une compétence manque ;
+- les tickets entrants ;
+- les comptes externes.
+
+### `Marketing`
+
+Ce rôle travaille surtout sur :
+
+- les contacts en lecture ;
+- les organisations en lecture ;
+- les offres ;
+- les campagnes ;
+- les listes de diffusion ;
+- les emails ;
+- le calendrier ;
+- les compétences en création si besoin pour le marketing ou une offre ;
+- les comptes externes.
+
+### `Développeur`
+
+Ce rôle a surtout une visibilité de consultation.
+
+Il peut lire :
+
+- les contacts ;
+- les organisations ;
+- les offres ;
+- les documents ;
+- la base de connaissances ;
+- les comptes externes.
+
+### `Assistance technique`
+
+Ce rôle intervient sur les outils techniques de fonctionnement du CRM.
+
+Il peut agir sur :
+
+- les utilisateurs ;
+- les équipes ;
+- les calendriers des jours travaillés ;
+- les modèles d'email ;
+- les PDF Templates ;
+- l'importation ;
+- la base de connaissances ;
+- les comptes externes.
+
+### `Automatisation`
+
+Ce rôle est réservé aux robots et intégrations techniques.
+
+Il sert à :
+
+- accéder à OpenAPI ;
+- utiliser les webhooks ;
+- séparer clairement les accès techniques des accès humains.
+
+## Matrice des droits
+
+Légende :
+
+- `L` = lecture
+- `C` = création
+- `M` = modification
+- `S` = suppression
+- `-` = pas d'accès
+
+| Entité | Admin CRM | Recrutement | Assistance pédagogique | Marketing | Développeur | Assistance technique | Automatisation |
+|---|---|---|---|---|---|---|---|
+| Organisations | L/C/M/S | L/C/M | L/C/M | L | L | - | - |
+| Contacts | L/C/M/S | L/C/M | L/C/M | L | L | - | - |
+| Offres | L/C/M/S | L/C/M | L/M | L/C/M | L | - | - |
+| Candidatures | L/C/M/S | L/C/M | L/C/M | - | - | - | - |
+| Contrats | L/C/M/S | L/C/M | L/C/M | - | - | - | - |
+| Tickets | L/C/M/S | L/C/M | L/C/M | - | - | - | - |
+| Prospects | - | - | - | - | - | - | - |
+| Formations | L/C/M/S | L | L/C/M | - | - | - | - |
+| Promotions | L/C/M/S | L | L/C/M | - | - | - | - |
+| Compétences | L/C/M/S | L/C | L/C | L/C | - | - | - |
+| Documents | L/C/M/S | L/C/M | L/C/M | L | L | - | - |
+| Base de connaissances | L/C/M/S | L | L | L | L | L/C/M | - |
+| Campagnes | L/C/M/S | L/C/M | L/C/M | L/C/M | - | - | - |
+| Listes de diffusion | L/C/M/S | L/C/M | L/C/M | L/C/M | - | - | - |
+| Emails | L/C/M/S | L/C/M | L/C/M | L/C/M | - | - | - |
+| Comptes Email | L/C/M | L/C/M | - | - | - | - | - |
+| Comptes externes | L/C/M | L/C/M | L/C/M | L/C/M | L/C/M | L/C/M | - |
+| OpenAPI | L/C/M | - | - | - | - | - | L/C/M |
+| Webhooks | L/C/M | - | - | - | - | - | L/C/M |
+| Flux globaux | L | - | - | - | - | - | - |
+| Tâches | L/C/M/S | L/C/M | L/C/M | L | - | - | - |
+| Appels | L/C/M/S | L/C/M | L/C/M | - | - | - | - |
+| Rendez-vous | L/C/M/S | L/C/M | L/C/M | - | - | - | - |
+| Calendrier | L/C/M/S | L/C/M | L/C/M | L/C/M | - | - | - |
+| Devise | - | - | - | - | - | - | - |
+| Utilisateurs | L/C/M/S | - | - | - | - | L/C/M | - |
+| Équipes | L/C/M/S | - | - | - | - | L/C/M | - |
+| Calendriers des jours travaillés | L/C/M/S | - | - | - | - | L/C/M | - |
+| Modèles d’email | L/C/M/S | L | - | L/C/M | - | L/C/M | - |
+| PDF Templates | L/C/M/S | - | - | - | - | L/C/M | - |
+| Importation | L/C/M/S | - | - | - | - | L/C/M | - |
+
+Notes importantes :
+
+- `Comptes Email` et `Comptes externes` sont des accès personnels : un utilisateur agit sur ses propres comptes, pas sur ceux des autres.
+- `OpenAPI` et `Webhooks` sont des accès techniques : la ligne indique un accès activé pour la configuration technique, pas un usage métier quotidien.
+- `Flux globaux` est réservé à `Admin CRM` : il peut être utile pour le pilotage global, mais il apporte trop de bruit pour les autres rôles.
+- `Devise` est désactivé pour tous les rôles : la gestion multi-devise n'est pas utilisée dans notre fonctionnement.
+- `Activités` peut rester `non-défini` dans Espo : c'est un conteneur générique. Ce sont les modules concrets (`Emails`, `Tâches`, `Appels`, `Rendez-vous`, `Calendrier`) qui portent les vrais droits métier.
+
+## Règles communes
+
+Les règles suivantes s'appliquent à toute l'organisation :
+
+- l'export est réservé à l'admin ;
+- la suppression est réservée à l'admin ;
+- la configuration du CRM est réservée à l'admin ;
+- les rôles doivent rester simples et lisibles ;
+- `Prospects` n'est pas utilisé dans l'organisation ;
+- le rôle `Automatisation` est réservé aux robots et intégrations.
+
+## Ce qu'il faut retenir
+
+- un rôle ne dépend pas du nom d'une personne ;
+- un rôle dépend de ce qu'une personne doit faire dans le CRM ;
+- mieux vaut quelques rôles clairs que beaucoup de rôles compliqués ;
+- l'objectif est de donner le bon niveau d'accès sans alourdir le travail.
+
+---
+
+# 25. Comment travailler proprement au quotidien ?
 
 ## Quand vous recevez une nouvelle entreprise
 
@@ -1358,7 +1554,7 @@ Un import mal préparé peut créer :
 
 ---
 
-# 25. Ce qu'il faut éviter
+# 26. Ce qu'il faut éviter
 
 ## Les erreurs les plus fréquentes
 
@@ -1380,7 +1576,7 @@ Un import mal préparé peut créer :
 
 ---
 
-# 26. Questions fréquentes
+# 27. Questions fréquentes
 
 ## Je vois des champs techniques ou des informations Filiz, dois-je les remplir ?
 
@@ -1409,7 +1605,7 @@ Il ne remplace pas les champs de suivi.
 
 ---
 
-# 27. Résumé ultra-court
+# 28. Résumé ultra-court
 
 ## Si vous retenez seulement l'essentiel
 
@@ -1432,7 +1628,7 @@ Et surtout :
 
 ---
 
-# 28. Conclusion
+# 29. Conclusion
 
 Le CRM doit devenir un outil simple de travail collectif.
 
