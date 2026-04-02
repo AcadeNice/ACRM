@@ -1,0 +1,20 @@
+{
+    "fields": {
+        "organisationsPrivilegieesAcadeNice": {
+            "type": "linkMultiple",
+            "layoutDetailDisabled": true,
+            "layoutListDisabled": true,
+            "layoutFiltersDisabled": true,
+            "layoutMassUpdateDisabled": true
+        }
+    },
+    "links": {
+        "organisationsPrivilegieesAcadeNice": {
+            "type": "hasMany",
+            "entity": "Account",
+            "foreign": "contactsPrivilegiesAcadeNice",
+            "relationName": "accountPrivilegedUser",
+            "layoutRelationshipsDisabled": true
+        }
+    }
+}

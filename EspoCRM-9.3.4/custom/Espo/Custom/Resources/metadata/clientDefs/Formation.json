@@ -1,0 +1,204 @@
+{
+    "controller": "controllers/record",
+    "color": "#2e7d6f",
+    "iconClass": "fas fa-graduation-cap",
+    "defaultSidePanelFieldList": [
+        ":assignedUser"
+    ],
+    "sidePanels": {
+        "detail": [
+            {
+                "name": "activities",
+                "reference": "activities",
+                "disabled": true
+            },
+            {
+                "name": "history",
+                "reference": "history",
+                "disabled": true
+            },
+            {
+                "name": "tasks",
+                "reference": "tasks",
+                "disabled": true
+            }
+        ],
+        "detailSmall": [
+            {
+                "name": "activities",
+                "reference": "activities",
+                "disabled": true
+            },
+            {
+                "name": "history",
+                "reference": "history",
+                "disabled": true
+            },
+            {
+                "name": "tasks",
+                "reference": "tasks",
+                "disabled": true
+            }
+        ]
+    },
+    "bottomPanels": {
+        "detail": [
+            {
+                "name": "activities",
+                "reference": "activities",
+                "disabled": true
+            },
+            {
+                "name": "history",
+                "reference": "history",
+                "disabled": true
+            }
+        ]
+    },
+    "dynamicLogic": {
+        "panels": {
+            "filizReferencePanel": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "contains",
+                            "attribute": "typeFormation",
+                            "value": "alternance"
+                        }
+                    ]
+                }
+            }
+        },
+        "fields": {
+            "modifierInformationsFiliz": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "contains",
+                            "attribute": "typeFormation",
+                            "value": "alternance"
+                        }
+                    ]
+                }
+            },
+            "filizDegreeId": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isFalse",
+                            "attribute": "modifierInformationsFiliz"
+                        }
+                    ]
+                }
+            },
+            "rncpTitre": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "equals",
+                                    "attribute": "niveau",
+                                    "value": "niveau3CapBep"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "niveau",
+                                    "value": "niveau4Bac"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "niveau",
+                                    "value": "niveau5BacPlus2"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "niveau",
+                                    "value": "niveau6BacPlus3BacPlus4"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "niveau",
+                                    "value": "niveau7Master"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "rncpCode": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "equals",
+                                    "attribute": "niveau",
+                                    "value": "niveau3CapBep"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "niveau",
+                                    "value": "niveau4Bac"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "niveau",
+                                    "value": "niveau5BacPlus2"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "niveau",
+                                    "value": "niveau6BacPlus3BacPlus4"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "niveau",
+                                    "value": "niveau7Master"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "codeNsf": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "equals",
+                                    "attribute": "niveau",
+                                    "value": "niveau3CapBep"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "niveau",
+                                    "value": "niveau4Bac"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "niveau",
+                                    "value": "niveau5BacPlus2"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "niveau",
+                                    "value": "niveau6BacPlus3BacPlus4"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "niveau",
+                                    "value": "niveau7Master"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

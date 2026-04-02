@@ -1,0 +1,61 @@
+{
+    "view": "views/dashlets/abstract/record-list",
+    "aclScope": "Campaign",
+    "entityType": "Campaign",
+    "options": {
+        "view": "views/dashlets/options/record-list",
+        "fields": {
+            "title": {
+                "type": "varchar",
+                "required": true
+            },
+            "autorefreshInterval": {
+                "type": "enumFloat",
+                "options": [0, 0.5, 1, 2, 5, 10]
+            },
+            "displayRecords": {
+                "type": "int",
+                "min": 1,
+                "max": 20
+            },
+            "expandedLayout": {
+                "type": "base",
+                "view": "views/dashlets/fields/records/expanded-layout"
+            }
+        },
+        "defaults": {
+            "title": "Campagnes actives",
+            "displayRecords": 6,
+            "autorefreshInterval": 0.5,
+            "sortBy": "startDate",
+            "sortDirection": "desc",
+            "searchData": {
+                "advanced": [
+                    {
+                        "attribute": "status",
+                        "type": "equals",
+                        "value": "Active"
+                    }
+                ]
+            },
+            "expandedLayout": {
+                "rows": [
+                    [
+                        {
+                            "name": "name",
+                            "link": true
+                        }
+                    ],
+                    [
+                        {
+                            "name": "status"
+                        },
+                        {
+                            "name": "startDate"
+                        }
+                    ]
+                ]
+            }
+        }
+    }
+}

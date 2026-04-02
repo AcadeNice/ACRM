@@ -1,0 +1,21 @@
+{
+    "scopeNames": {
+        "Account": "Organisation",
+        "Opportunity": "Offre"
+    },
+    "scopeNamesPlural": {
+        "Account": "Organisations",
+        "Opportunity": "Offres"
+    },
+    "links": {
+        "accounts": "Organisations",
+        "account": "Organisation",
+        "opportunities": "Offres",
+        "opportunity": "Offre"
+    },
+    "dashlets": {
+        "Opportunities": "Mes offres",
+        "OpportunitiesByStage": "Offres par étape",
+        "OpportunitiesByLeadSource": "Offres par source de prospects"
+    }
+}

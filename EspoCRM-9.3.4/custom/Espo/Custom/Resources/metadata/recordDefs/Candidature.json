@@ -1,0 +1,8 @@
+{
+    "beforeCreateHookClassNameList": [
+        "Espo\\Custom\\Classes\\RecordHooks\\Candidature\\BeforeSave"
+    ],
+    "beforeUpdateHookClassNameList": [
+        "Espo\\Custom\\Classes\\RecordHooks\\Candidature\\BeforeSave"
+    ]
+}

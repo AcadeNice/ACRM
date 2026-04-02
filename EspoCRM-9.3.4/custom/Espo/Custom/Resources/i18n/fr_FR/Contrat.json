@@ -1,0 +1,70 @@
+{
+    "fields": {
+        "name": "Nom",
+        "promotion": "Promotion",
+        "candidature": "Candidature",
+        "contractCategory": "Catégorie",
+        "contratTypeGestion": "Gestion",
+        "statutContrat": "Statut contrat",
+        "dateDebut": "Date de début",
+        "dateFin": "Date de fin",
+        "montant": "Montant",
+        "commentaireAdmin": "Commentaires administratifs",
+        "envoyeDansFiliz": "Envoyé dans Filiz",
+        "filizFolderId": "ID dossier Filiz",
+        "filizQuotationId": "ID devis Filiz",
+        "filizStatus": "Statut Filiz",
+        "filizCurrentStep": "Étape Filiz",
+        "filizLastSyncAt": "Dernière synchro Filiz",
+        "filizSentAt": "Date d'envoi Filiz",
+        "filizErrorMessage": "Erreur Filiz",
+        "createdAt": "Date de création",
+        "modifiedAt": "Date de modification"
+    },
+    "links": {
+        "promotion": "Promotion",
+        "candidature": "Candidature"
+    },
+    "labels": {
+        "Create Contrat": "Créer un contrat"
+    },
+    "options": {
+        "contractCategory": {
+            "alternance": "Alternance",
+            "initiale": "Initiale",
+            "courte": "Courte"
+        },
+        "contratTypeGestion": {
+            "filiz": "Filiz",
+            "manuel": "Manuel"
+        },
+        "statutContrat": {
+            "aConstituer": "À constituer",
+            "enPreparation": "En préparation",
+            "envoye": "Envoyé",
+            "valide": "Validé",
+            "signe": "Signé",
+            "annule": "Annulé",
+            "rompu": "Rompu"
+        },
+        "filizStatus": {
+            "nonEnvoye": "Non envoyé",
+            "cree": "Créé",
+            "enCours": "En cours",
+            "signatureEnCours": "Signature en cours",
+            "finalise": "Finalisé",
+            "obsolete": "Obsolète",
+            "erreurSync": "Erreur de synchro"
+        }
+    },
+    "tooltips": {
+        "contractCategory": "Alternance, initiale ou courte.",
+        "contratTypeGestion": "Filiz pour l'alternance, manuel pour le reste.",
+        "statutContrat": "Statut administratif interne du contrat.",
+        "promotion": "Promotion Filiz utilisée pour créer le dossier. Indispensable si un préremplissage est prévu.",
+        "envoyeDansFiliz": "Indique si le dossier a déjà été envoyé vers Filiz.",
+        "filizStatus": "État remonté depuis Filiz. À ne pas saisir manuellement si la synchro existe.",
+        "filizSentAt": "Date du dernier envoi du dossier vers Filiz.",
+        "filizErrorMessage": "Dernière erreur de synchronisation ou d'envoi Filiz."
+    }
+}

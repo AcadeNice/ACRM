@@ -1,0 +1,12 @@
+{
+    "entity": true,
+    "layouts": true,
+    "tab": true,
+    "acl": true,
+    "customizable": true,
+    "stream": true,
+    "importable": true,
+    "notifications": true,
+    "object": true,
+    "statusField": "statutContrat"
+}

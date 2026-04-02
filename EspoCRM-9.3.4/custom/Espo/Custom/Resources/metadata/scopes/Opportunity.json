@@ -1,0 +1,13 @@
+{
+    "iconClass": "fas fa-briefcase",
+    "stream": true,
+    "disabled": false,
+    "statusField": "stage",
+    "kanbanStatusIgnoreList": [
+        "Closed Lost"
+    ],
+    "stars": false,
+    "preserveAuditLog": true,
+    "collaborators": false,
+    "assignedUsers": false
+}

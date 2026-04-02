@@ -1,0 +1,233 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "accountTypeAcadeNice"
+                }
+            ],
+            [
+                {
+                    "name": "relationStatut"
+                },
+                {
+                    "name": "contacts"
+                },
+                {
+                    "name": "partnerType"
+                }
+            ],
+            [
+                {
+                    "name": "accepteAlternance"
+                },
+                {
+                    "name": "clientAgence"
+                }
+            ],
+            [
+                {
+                    "name": "emailAddress"
+                },
+                {
+                    "name": "phoneNumber"
+                }
+            ],
+            [
+                {
+                    "name": "website"
+                },
+                {
+                    "name": "industry"
+                }
+            ],
+            [
+                {
+                    "name": "siretAcadeNice"
+                },
+                {
+                    "name": "codeApe"
+                },
+                {
+                    "name": "codeIdcc"
+                },
+                {
+                    "name": "nombreSalaries"
+                }
+            ],
+            [
+                {
+                    "name": "billingAddressStreetNumber"
+                },
+                {
+                    "name": "billingAddressStreetExtension"
+                },
+                {
+                    "name": "billingAddressStreetType"
+                }
+            ],
+            [
+                {
+                    "name": "billingAddressStreetName"
+                },
+                {
+                    "name": "billingAddressPostalCode"
+                }
+            ],
+            [
+                {
+                    "name": "billingAddressCity"
+                },
+                {
+                    "name": "billingAddressCountry"
+                },
+                {
+                    "name": "billingAddressComplementFree"
+                }
+            ]
+        ],
+        "style": "default",
+        "name": "organisationPanel",
+        "label": "🏢 Organisation"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "originCategory"
+                },
+                {
+                    "name": "originChannel"
+                }
+            ],
+            [
+                {
+                    "name": "originPrescriberContact"
+                },
+                {
+                    "name": "originPrescriberAccount"
+                }
+            ],
+            [
+                {
+                    "name": "originComment"
+                }
+            ]
+        ],
+        "style": "default",
+        "name": "originePanel",
+        "label": "🧭 Origine"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "statutRelationCfa"
+                }
+            ],
+            [
+                {
+                    "name": "nbContratsSignes"
+                },
+                {
+                    "name": "nbContrats12Mois"
+                }
+            ],
+            [
+                {
+                    "name": "dernierContratSigneLe"
+                }
+            ],
+            [
+                {
+                    "name": "commentaireRelation"
+                }
+            ]
+        ],
+        "style": "default",
+        "name": "relationPanel",
+        "customLabel": "🎓 Relation avec le CFA"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "modifierInformationsFiliz"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "filizCompanyId"
+                },
+                {
+                    "name": "secteurEmployeur"
+                },
+                {
+                    "name": "typeEmployeurFiliz"
+                },
+                {
+                    "name": "employeurSpecifiqueFiliz"
+                }
+            ]
+        ],
+        "style": "default",
+        "name": "filizPanel",
+        "label": "🔗 Filiz"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "statutRelationAgence"
+                },
+                {
+                    "name": "statutCommercialAgence"
+                }
+            ],
+            [
+                {
+                    "name": "sourceAgence"
+                },
+                {
+                    "name": "prochaineRelanceAgence"
+                }
+            ],
+            [
+                {
+                    "name": "contactRecommandePar"
+                },
+                {
+                    "name": "contactsPrivilegiesAcadeNice"
+                }
+            ],
+            [
+                {
+                    "name": "typeClientAgence"
+                },
+                {
+                    "name": "montantEstimeAgence"
+                }
+            ],
+            [
+                {
+                    "name": "contratMaintenanceEnCours"
+                },
+                {
+                    "name": "ancienClientAgence"
+                }
+            ],
+            [
+                {
+                    "name": "commentairesAgence"
+                }
+            ]
+        ],
+        "style": "default",
+        "name": "agencePanel",
+        "customLabel": "🛠️ Relation avec l'Agence"
+    }
+]

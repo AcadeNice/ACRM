@@ -1,0 +1,43 @@
+{
+    "fields": {
+        "name": "Compétence",
+        "skillType": "Type",
+        "skillCategory": "Catégorie",
+        "description": "Description",
+        "active": "Active",
+        "createdAt": "Date de création",
+        "modifiedAt": "Date de modification",
+        "contacts": "Contacts",
+        "formations": "Formations",
+        "opportunities": "Offres"
+    },
+    "links": {
+        "contacts": "Contacts",
+        "formations": "Formations",
+        "opportunities": "Offres"
+    },
+    "labels": {
+        "Create Skill": "Créer une compétence"
+    },
+    "options": {
+        "skillType": {
+            "technique": "Technique",
+            "logiciel": "Logiciel",
+            "softSkill": "Soft skill",
+            "metier": "Métier",
+            "langue": "Langue",
+            "autre": "Autre"
+        },
+        "skillCategory": {
+            "developpement": "Développement",
+            "noCode": "No-code",
+            "commerce": "Commerce",
+            "graphisme": "Graphisme",
+            "bureautique": "Bureautique",
+            "marketing": "Marketing",
+            "gestionProjet": "Gestion de projet",
+            "langues": "Langues",
+            "general": "Général"
+        }
+    }
+}

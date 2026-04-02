@@ -1,0 +1,140 @@
+{
+    "fields": {
+        "name": "Intitulé du poste",
+        "account": "Organisation",
+        "contactOrganisation": "Contact au sein de l'organisation",
+        "formation": "Formation liée",
+        "typeOpportunite": "Type d'offre / besoin",
+        "statutOpportunity": "Statut du besoin",
+        "localisation": "Localisation",
+        "teletravail": "Télétravail",
+        "nombrePostes": "Nombre de postes",
+        "nombreCandidatsAProposer": "Nombre de candidats à proposer",
+        "urgence": "Urgence",
+        "niveauRequis": "Niveau requis",
+        "dateDebutSouhaitee": "Date de début souhaitée",
+        "rythmeSouhaite": "Rythme souhaité",
+        "referenceInterneJobAffinity": "Référence interne JobAffinity",
+        "modifierReferenceJobAffinity": "Modifier la référence",
+        "annonceTitre": "Titre d'annonce",
+        "annonceCourte": "Accroche d'annonce",
+        "annonceTexte": "Texte d'annonce",
+        "annonceStatut": "Statut de l'annonce",
+        "annonceCanauxDiffusion": "Canaux de diffusion",
+        "skills": "Pré requis / Compétences",
+        "salaireMin": "Salaire min.",
+        "salaireMax": "Salaire max.",
+        "permisRequis": "Permis requis",
+        "ageMinimum": "Âge minimum",
+        "ageMaximum": "Âge maximum",
+        "langueRequise": "Langue requise",
+        "datePublication": "Date de publication",
+        "dateFinPublication": "Fin de diffusion",
+        "description": "Commentaires internes",
+        "createdAt": "Date de création",
+        "modifiedAt": "Date de modification"
+    },
+    "links": {
+        "account": "Organisation",
+        "contactOrganisation": "Contact au sein de l'organisation",
+        "formation": "Formation liée",
+        "skills": "Compétences",
+        "candidatures": "Candidatures",
+        "contrats": "Contrats"
+    },
+    "options": {
+        "typeOpportunite": {
+            "alternance": "Alternance",
+            "stage": "Stage",
+            "emploi": "Emploi",
+            "autre": "Autre"
+        },
+        "statutOpportunity": {
+            "ouverte": "Ouverte",
+            "enCours": "En cours",
+            "pourvue": "Pourvue",
+            "fermee": "Fermée",
+            "suspendue": "Suspendue"
+        },
+        "teletravail": {
+            "non": "Non",
+            "partiel": "Partiel",
+            "oui": "Oui"
+        },
+        "urgence": {
+            "basse": "Basse",
+            "normale": "Normale",
+            "haute": "Haute",
+            "urgente": "Urgente"
+        },
+        "niveauRequis": {
+            "aucunNiveauPrecis": "Aucun niveau précis",
+            "capBep": "CAP / BEP",
+            "bac": "Bac",
+            "bacPlus2": "Bac +2",
+            "bacPlus3": "Bac +3",
+            "bacPlus5": "Bac +5",
+            "autre": "Autre"
+        },
+        "langueRequise": {
+            "": "",
+            "francais": "Français",
+            "anglais": "Anglais",
+            "allemand": "Allemand",
+            "italien": "Italien",
+            "espagnol": "Espagnol",
+            "portugais": "Portugais",
+            "neerlandais": "Néerlandais",
+            "luxembourgeois": "Luxembourgeois",
+            "russe": "Russe",
+            "ukrainien": "Ukrainien",
+            "polonais": "Polonais",
+            "tcheque": "Tchèque",
+            "slovaque": "Slovaque",
+            "slovene": "Slovène",
+            "croate": "Croate",
+            "serbe": "Serbe",
+            "bosnien": "Bosnien",
+            "bulgare": "Bulgare",
+            "macedonien": "Macédonien",
+            "bielorusse": "Biélorusse",
+            "autre": "Autre"
+        },
+        "annonceStatut": {
+            "brouillon": "Brouillon",
+            "aDiffuser": "À diffuser",
+            "diffusee": "Diffusée",
+            "pausee": "En pause",
+            "fermee": "Fermée"
+        },
+        "annonceCanauxDiffusion": {
+            "jobAffinity": "JobAffinity",
+            "indeed": "Indeed",
+            "hellowork": "Hellowork",
+            "linkedinJobs": "LinkedIn Jobs",
+            "welcomeToTheJungle": "Welcome to the Jungle",
+            "siteAcadeNice": "Site AcadeNice",
+            "reseauxSociaux": "Réseaux sociaux",
+            "autre": "Autre"
+        }
+    },
+    "tooltips": {
+        "formation": "Formation AcadéNice principalement concernée par cette opportunité.",
+        "statutOpportunity": "Statut interne du besoin entreprise.",
+        "contactOrganisation": "Personne de contact principale côté organisation pour ce besoin.",
+        "dateDebutSouhaitee": "Date à laquelle l'organisation souhaite idéalement démarrer.",
+        "rythmeSouhaite": "Rythme ou cadence souhaitée pour l'alternance si l'information est connue.",
+        "referenceInterneJobAffinity": "Référence technique venant de JobAffinity. À modifier manuellement seulement en cas de besoin réel.",
+        "modifierReferenceJobAffinity": "Cocher uniquement si vous devez corriger manuellement la référence interne provenant de JobAffinity.",
+        "annonceTitre": "Titre utilisé pour la diffusion sur les jobboards.",
+        "annonceTexte": "Texte complet de l'annonce prêt à être diffusé.",
+        "annonceCanauxDiffusion": "Canaux réellement utilisés pour diffuser cette offre.",
+        "skills": "Pré requis techniques, logiciels ou soft skills réellement attendus.",
+        "permisRequis": "Cocher uniquement si le permis est indispensable pour le poste.",
+        "nombreCandidatsAProposer": "Nombre de profils que l'équipe prévoit de proposer à l'organisation.",
+        "description": "Commentaires internes de l'équipe, non destinés à la diffusion."
+    },
+    "labels": {
+        "Create Opportunity": "Créer une offre"
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "iconClass": "fas fa-briefcase",
+    "defaultSidePanelFieldList": [
+        ":assignedUser"
+    ],
+    "relationshipPanels": {
+        "contactOrganisation": {
+            "createAttributeMap": {
+                "accountId": "accountId",
+                "accountName": "accountName"
+            },
+            "selectHandler": "handlers/select-related/same-account-many"
+        }
+    },
+    "dynamicLogic": {
+        "fields": {
+            "referenceInterneJobAffinity": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isFalse",
+                            "attribute": "modifierReferenceJobAffinity"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "kanbanViewMode": true,
+    "color": "#ff00b8"
+}

@@ -1,0 +1,32 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "account",
+        "width": 16
+    },
+    {
+        "name": "formation",
+        "width": 14
+    },
+    {
+        "name": "statutOpportunity",
+        "width": 12
+    },
+    {
+        "name": "annonceStatut",
+        "width": 10,
+        "align": "left"
+    },
+    {
+        "name": "localisation",
+        "width": 14
+    },
+    {
+        "name": "ageMaximum",
+        "width": 10,
+        "align": "left"
+    }
+]

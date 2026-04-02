@@ -1,0 +1,28 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "skillType",
+        "width": 18
+    },
+    {
+        "name": "skillCategory",
+        "width": 18
+    },
+    {
+        "name": "active",
+        "width": 8
+    },
+    {
+        "name": "formations",
+        "width": 16,
+        "notSortable": true
+    },
+    {
+        "name": "opportunities",
+        "width": 16,
+        "notSortable": true
+    }
+]

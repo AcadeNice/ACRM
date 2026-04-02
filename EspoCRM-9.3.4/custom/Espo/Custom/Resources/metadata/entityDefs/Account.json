@@ -1,0 +1,461 @@
+{
+    "fields": {
+        "type": {
+            "layoutDetailDisabled": true,
+            "layoutEditDisabled": true,
+            "layoutListDisabled": true,
+            "layoutFiltersDisabled": true,
+            "layoutMassUpdateDisabled": true
+        },
+        "industry": {
+            "type": "enum",
+            "options": [
+                "",
+                "developpementWebLogiciel",
+                "informatiqueItReseaux",
+                "noCodeAutomatisation",
+                "dataIa",
+                "designGraphismeUxUi",
+                "marketingCommunication",
+                "commerceBusinessDeveloppement",
+                "eCommerce",
+                "gestionAdministratifRh",
+                "formationEducation",
+                "conseilServicesEntreprises",
+                "secteurPublicInstitution",
+                "associationEss",
+                "autre"
+            ],
+            "isSorted": false,
+            "style": {
+                "": null,
+                "developpementWebLogiciel": null,
+                "informatiqueItReseaux": null,
+                "noCodeAutomatisation": null,
+                "dataIa": null,
+                "designGraphismeUxUi": null,
+                "marketingCommunication": null,
+                "commerceBusinessDeveloppement": null,
+                "eCommerce": null,
+                "gestionAdministratifRh": null,
+                "formationEducation": null,
+                "conseilServicesEntreprises": null,
+                "secteurPublicInstitution": null,
+                "associationEss": null,
+                "autre": null
+            },
+            "audited": true
+        },
+        "accountTypeAcadeNice": {
+            "type": "enum",
+            "options": [
+                "entreprise",
+                "partenaire",
+                "autre"
+            ],
+            "default": "entreprise",
+            "displayAsLabel": true,
+            "audited": true
+        },
+        "partnerType": {
+            "type": "enum",
+            "options": [
+                "",
+                "missionLocale",
+                "lycee",
+                "ecole",
+                "centreFormation",
+                "institutionPublique",
+                "servicePublicEmploi",
+                "association",
+                "autre"
+            ],
+            "displayAsLabel": true,
+            "audited": true
+        },
+        "relationStatut": {
+            "type": "enum",
+            "options": [
+                "prospect",
+                "client",
+                "partenaire"
+            ],
+            "displayAsLabel": true,
+            "audited": true
+        },
+        "statutRelationCfa": {
+            "type": "enum",
+            "options": [
+                "prospect",
+                "client",
+                "partenaire"
+            ],
+            "displayAsLabel": true,
+            "audited": true
+        },
+        "originCategory": {
+            "type": "enum",
+            "options": [
+                "prospection",
+                "cooptation",
+                "siteWeb",
+                "telephone",
+                "reseauxSociaux",
+                "campagne",
+                "parrainage",
+                "evenement",
+                "autre"
+            ],
+            "style": {
+                "prospection": null,
+                "cooptation": null,
+                "siteWeb": null,
+                "telephone": null,
+                "reseauxSociaux": null,
+                "campagne": null,
+                "parrainage": null,
+                "evenement": null,
+                "autre": null
+            },
+            "default": "prospection",
+            "audited": true
+        },
+        "phoneNumber": {
+            "required": true
+        },
+        "originChannel": {
+            "type": "enum",
+            "options": [
+                "manuel",
+                "siteAcadeNice",
+                "telephone",
+                "linkedin",
+                "instagram",
+                "facebook",
+                "reseau",
+                "autre"
+            ],
+            "audited": true
+        },
+        "originPrescriberContact": {
+            "type": "link",
+            "audited": true
+        },
+        "originPrescriberAccount": {
+            "type": "link",
+            "audited": true
+        },
+        "originComment": {
+            "type": "text",
+            "audited": true
+        },
+        "siretAcadeNice": {
+            "type": "varchar",
+            "maxLength": 14,
+            "pattern": "^[0-9]{14}$",
+            "view": "custom:views/fields/siret",
+            "audited": true
+        },
+        "filizCompanyId": {
+            "type": "varchar",
+            "maxLength": 100,
+            "audited": true
+        },
+        "modifierInformationsFiliz": {
+            "type": "bool",
+            "default": false,
+            "audited": true
+        },
+        "zoneGeographique": {
+            "type": "varchar",
+            "maxLength": 255
+        },
+        "accepteAlternance": {
+            "type": "bool",
+            "default": false,
+            "audited": true
+        },
+        "secteurEmployeur": {
+            "type": "enum",
+            "options": [
+                "prive",
+                "public"
+            ],
+            "audited": true
+        },
+        "typeEmployeurFiliz": {
+            "type": "enum",
+            "options": [
+                "",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16",
+                "21",
+                "22",
+                "23",
+                "24",
+                "25",
+                "26",
+                "27",
+                "28",
+                "29",
+                "30"
+            ],
+            "audited": true
+        },
+        "employeurSpecifiqueFiliz": {
+            "type": "enum",
+            "options": [
+                "",
+                "0",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "audited": true
+        },
+        "codeApe": {
+            "type": "varchar",
+            "maxLength": 20,
+            "audited": true
+        },
+        "codeIdcc": {
+            "type": "varchar",
+            "maxLength": 20,
+            "audited": true
+        },
+        "nombreSalaries": {
+            "type": "int",
+            "audited": true
+        },
+        "nbContratsSignes": {
+            "type": "int",
+            "default": 0,
+            "readOnly": true
+        },
+        "nbContrats12Mois": {
+            "type": "int",
+            "default": 0,
+            "readOnly": true
+        },
+        "dernierContratSigneLe": {
+            "type": "date",
+            "readOnly": true
+        },
+        "commentaireRelation": {
+            "type": "text",
+            "audited": true
+        },
+        "clientAgence": {
+            "type": "bool",
+            "default": false,
+            "audited": true
+        },
+        "statutRelationAgence": {
+            "type": "enum",
+            "options": [
+                "prospect",
+                "client",
+                "ancienClient"
+            ],
+            "displayAsLabel": true,
+            "audited": true
+        },
+        "statutCommercialAgence": {
+            "type": "enum",
+            "options": [
+                "aQualifier",
+                "aRecontacter",
+                "premierEchange",
+                "besoinIdentifie",
+                "devisEnCours",
+                "devisEnvoye",
+                "client",
+                "sansSuite"
+            ],
+            "displayAsLabel": true,
+            "audited": true
+        },
+        "sourceAgence": {
+            "type": "enum",
+            "options": [
+                "",
+                "siteWeb",
+                "salonEvenement",
+                "recommandation",
+                "appelEntrant",
+                "emailEntrant",
+                "prospectionSortante",
+                "autre"
+            ],
+            "audited": true
+        },
+        "contactRecommandePar": {
+            "type": "link",
+            "audited": true
+        },
+        "contactsPrivilegiesAcadeNice": {
+            "type": "linkMultiple",
+            "audited": true
+        },
+        "prochaineRelanceAgence": {
+            "type": "date",
+            "audited": true
+        },
+        "typeClientAgence": {
+            "type": "multiEnum",
+            "options": [
+                "",
+                "developpementWeb",
+                "noCode",
+                "design",
+                "maintenance",
+                "autre"
+            ],
+            "style": {
+                "": null,
+                "developpementWeb": null,
+                "noCode": null,
+                "design": null,
+                "maintenance": null,
+                "autre": null
+            },
+            "default": null,
+            "audited": true
+        },
+        "contratMaintenanceEnCours": {
+            "type": "bool",
+            "default": false,
+            "audited": true
+        },
+        "ancienClientAgence": {
+            "type": "bool",
+            "default": false,
+            "audited": true
+        },
+        "montantEstimeAgence": {
+            "type": "currency",
+            "audited": true
+        },
+        "commentairesAgence": {
+            "type": "text",
+            "audited": true
+        },
+        "billingAddressStreetNumber": {
+            "type": "int",
+            "audited": true
+        },
+        "billingAddressStreetExtension": {
+            "type": "enum",
+            "options": [
+                "",
+                "bis",
+                "ter",
+                "quater",
+                "A",
+                "B",
+                "C",
+                "D",
+                "E",
+                "F"
+            ],
+            "audited": true
+        },
+        "billingAddressStreetType": {
+            "type": "enum",
+            "options": [
+                "rue",
+                "avenue",
+                "boulevard",
+                "chemin",
+                "impasse",
+                "allee",
+                "place",
+                "route",
+                "quai",
+                "residence",
+                "autre"
+            ],
+            "audited": true
+        },
+        "billingAddressStreetName": {
+            "type": "varchar",
+            "maxLength": 100,
+            "audited": true
+        },
+        "billingAddressComplementFree": {
+            "type": "varchar",
+            "maxLength": 100,
+            "audited": true
+        },
+        "billingAddressPostalCode": {
+            "type": "varchar",
+            "maxLength": 5,
+            "pattern": "^[0-9]{5}$",
+            "view": "custom:views/fields/postal-code",
+            "audited": true
+        },
+        "billingAddressCountry": {
+            "type": "enum",
+            "options": [
+                "France",
+                "Monaco",
+                "Italie",
+                "Espagne",
+                "Suisse",
+                "Allemagne",
+                "Belgique",
+                "Luxembourg",
+                "Andorre"
+            ],
+            "default": "France",
+            "audited": true
+        }
+    },
+    "links": {
+        "originPrescriberContact": {
+            "type": "belongsTo",
+            "entity": "Contact"
+        },
+        "originPrescriberAccount": {
+            "type": "belongsTo",
+            "entity": "Account"
+        },
+        "contactRecommandePar": {
+            "type": "belongsTo",
+            "entity": "Contact"
+        },
+        "contactsPrivilegiesAcadeNice": {
+            "type": "hasMany",
+            "entity": "User",
+            "foreign": "organisationsPrivilegieesAcadeNice",
+            "relationName": "accountPrivilegedUser",
+            "layoutRelationshipsDisabled": true
+        },
+        "candidatures": {
+            "type": "hasMany",
+            "entity": "Candidature",
+            "foreign": "account"
+        },
+        "contrats": {
+            "type": "hasMany",
+            "entity": "Contrat",
+            "foreign": "account"
+        }
+    },
+    "collection": {
+        "orderBy": "createdAt",
+        "order": "desc",
+        "textFilterFields": [
+            "name",
+            "emailAddress"
+        ],
+        "fullTextSearch": false,
+        "countDisabled": false
+    },
+    "optimisticConcurrencyControl": true
+}

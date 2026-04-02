@@ -1,0 +1,702 @@
+{
+    "recordViews": {
+        "edit": "custom:views/contact/record/edit",
+        "editSmall": "custom:views/contact/record/edit-small"
+    },
+    "defaultSidePanelFieldList": [
+        ":assignedUser"
+    ],
+    "dynamicLogic": {
+        "fields": {
+            "parentRole": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "contains",
+                            "attribute": "contactRoles",
+                            "value": "parent"
+                        }
+                    ]
+                }
+            },
+            "testResultat": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "equals",
+                                    "attribute": "statutCandidat",
+                                    "value": "admissible"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "statutCandidat",
+                                    "value": "testEnCours"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "statutCandidat",
+                                    "value": "admis"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "statutCandidat",
+                                    "value": "enRechercheEntreprise"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "statutCandidat",
+                                    "value": "positionne"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "statutCandidat",
+                                    "value": "place"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "sourceJobboard": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "sourceCategory",
+                            "value": "jobboard"
+                        }
+                    ]
+                }
+            },
+            "sourceCvTheque": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "sourceCategory",
+                            "value": "cvTheque"
+                        }
+                    ]
+                }
+            },
+            "sourcePrescriberContact": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "equals",
+                                    "attribute": "sourceCategory",
+                                    "value": "parrainage"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "sourceCategory",
+                                    "value": "partenaire"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "sourcePrescriberAccount": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "equals",
+                                    "attribute": "sourceCategory",
+                                    "value": "parrainage"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "sourceCategory",
+                                    "value": "partenaire"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "titreSejourAutoriseTravail": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "nationaliteFiliz",
+                            "value": "autre"
+                        }
+                    ]
+                }
+            },
+            "filizUserId": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isFalse",
+                            "attribute": "modifierFilizUserId"
+                        }
+                    ]
+                }
+            },
+            "contactsAccompagnes": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "contains",
+                            "attribute": "contactRoles",
+                            "value": "tuteurEntreprise"
+                        }
+                    ]
+                }
+            },
+            "vehicule": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "has",
+                                    "attribute": "permis",
+                                    "value": "enCours"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "permis",
+                                    "value": "voiture"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "permis",
+                                    "value": "deuxRoues125"
+                                },
+                                {
+                                    "type": "has",
+                                    "attribute": "permis",
+                                    "value": "moto"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "title": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "collaborateur"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "dirigeant"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "tuteurEntreprise"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "partenaire"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "autre"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "emancipe": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "estMineur"
+                        },
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "candidat"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "ancienCandidat"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "etudiant"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "alumni"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "responsableLegal": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "estMineur"
+                        },
+                        {
+                            "type": "isFalse",
+                            "attribute": "emancipe"
+                        },
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "candidat"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "ancienCandidat"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "etudiant"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "alumni"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "birthdate": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "candidat"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "ancienCandidat"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "etudiant"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "alumni"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "nomUsage": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "candidat"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "ancienCandidat"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "etudiant"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "alumni"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "dateAdmission": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "equals",
+                                    "attribute": "statutCandidat",
+                                    "value": "admis"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "statutCandidat",
+                                    "value": "enRechercheEntreprise"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "statutCandidat",
+                                    "value": "positionne"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "statutCandidat",
+                                    "value": "place"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "datePlacement": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "statutCandidat",
+                            "value": "place"
+                        }
+                    ]
+                }
+            },
+            "rqth": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "candidat"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "ancienCandidat"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "etudiant"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "alumni"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "sportifHautNiveau": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "candidat"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "ancienCandidat"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "etudiant"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "alumni"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "equivalenceJeune": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "candidat"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "ancienCandidat"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "etudiant"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "alumni"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "extensionBoe": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "candidat"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "ancienCandidat"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "etudiant"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "alumni"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "numeroSecuriteSociale": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "candidat"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "ancienCandidat"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "etudiant"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "alumni"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        "panels": {
+            "parcoursCandidat": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "candidat"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "ancienCandidat"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "etudiant"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "alumni"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "sourceCandidat": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "candidat"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "ancienCandidat"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "profilCandidat": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "candidat"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "ancienCandidat"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "etudiant"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "alumni"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "filizCandidat": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "candidat"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "ancienCandidat"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "etudiant"
+                                },
+                                {
+                                    "type": "contains",
+                                    "attribute": "contactRoles",
+                                    "value": "alumni"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "relationTuteur": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "contains",
+                            "attribute": "contactRoles",
+                            "value": "tuteurEntreprise"
+                        }
+                    ]
+                }
+            },
+            "relationParent": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "contains",
+                            "attribute": "contactRoles",
+                            "value": "parent"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "kanbanViewMode": false,
+    "color": "#058cff",
+    "iconClass": "fas fa-id-badge"
+}

@@ -1,0 +1,240 @@
+{
+    "entityClassName": "Espo\\Core\\Templates\\Entities\\BasePlus",
+    "repositoryClassName": "Espo\\Core\\Templates\\Repositories\\BasePlus",
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "maxLength": 255,
+            "audited": true
+        },
+        "promotion": {
+            "type": "link",
+            "required": true,
+            "audited": true
+        },
+        "candidature": {
+            "type": "link",
+            "required": true,
+            "audited": true
+        },
+        "contact": {
+            "type": "link",
+            "readOnly": true,
+            "layoutDetailDisabled": true,
+            "layoutListDisabled": true,
+            "layoutFiltersDisabled": true,
+            "layoutMassUpdateDisabled": true
+        },
+        "account": {
+            "type": "link",
+            "readOnly": true,
+            "layoutDetailDisabled": true,
+            "layoutListDisabled": true,
+            "layoutFiltersDisabled": true,
+            "layoutMassUpdateDisabled": true
+        },
+        "opportunity": {
+            "type": "link",
+            "readOnly": true,
+            "layoutDetailDisabled": true,
+            "layoutListDisabled": true,
+            "layoutFiltersDisabled": true,
+            "layoutMassUpdateDisabled": true
+        },
+        "formation": {
+            "type": "link",
+            "readOnly": true,
+            "layoutDetailDisabled": true,
+            "layoutListDisabled": true,
+            "layoutFiltersDisabled": true,
+            "layoutMassUpdateDisabled": true
+        },
+        "contractCategory": {
+            "type": "enum",
+            "options": ["alternance", "initiale", "courte"],
+            "required": true,
+            "displayAsLabel": true,
+            "audited": true
+        },
+        "contratTypeGestion": {
+            "type": "enum",
+            "options": ["filiz", "manuel"],
+            "default": "manuel",
+            "displayAsLabel": true,
+            "audited": true
+        },
+        "statutContrat": {
+            "type": "enum",
+            "options": ["aConstituer", "enPreparation", "envoye", "valide", "signe", "annule", "rompu"],
+            "default": "aConstituer",
+            "displayAsLabel": true,
+            "audited": true
+        },
+        "dateDebut": {
+            "type": "date",
+            "audited": true
+        },
+        "dateFin": {
+            "type": "date",
+            "audited": true
+        },
+        "montant": {
+            "type": "currency",
+            "audited": true
+        },
+        "commentaireAdmin": {
+            "type": "text",
+            "audited": true
+        },
+        "envoyeDansFiliz": {
+            "type": "bool",
+            "default": false,
+            "audited": true
+        },
+        "filizFolderId": {
+            "type": "varchar",
+            "maxLength": 100,
+            "audited": true
+        },
+        "filizQuotationId": {
+            "type": "varchar",
+            "maxLength": 100,
+            "audited": true
+        },
+        "filizStatus": {
+            "type": "enum",
+            "options": ["nonEnvoye", "cree", "enCours", "signatureEnCours", "finalise", "obsolete", "erreurSync"],
+            "default": "nonEnvoye",
+            "displayAsLabel": true,
+            "audited": true
+        },
+        "filizCurrentStep": {
+            "type": "int",
+            "audited": true
+        },
+        "filizLastSyncAt": {
+            "type": "datetime",
+            "audited": true
+        },
+        "filizSentAt": {
+            "type": "datetime",
+            "audited": true
+        },
+        "filizErrorMessage": {
+            "type": "text",
+            "audited": true
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "modifiedBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "assignedUser": {
+            "type": "link",
+            "required": false,
+            "audited": true,
+            "view": "views/fields/assigned-user"
+        },
+        "teams": {
+            "type": "linkMultiple",
+            "audited": true,
+            "view": "views/fields/teams"
+        }
+    },
+    "links": {
+        "createdBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "modifiedBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "assignedUser": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "teams": {
+            "type": "hasMany",
+            "entity": "Team",
+            "relationName": "entityTeam",
+            "layoutRelationshipsDisabled": true
+        },
+        "meetings": {
+            "type": "hasMany",
+            "entity": "Meeting",
+            "foreign": "parent"
+        },
+        "calls": {
+            "type": "hasMany",
+            "entity": "Call",
+            "foreign": "parent"
+        },
+        "tasks": {
+            "type": "hasChildren",
+            "entity": "Task",
+            "foreign": "parent"
+        },
+        "emails": {
+            "type": "hasChildren",
+            "entity": "Email",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "promotion": {
+            "type": "belongsTo",
+            "entity": "Promotion",
+            "foreign": "contrats"
+        },
+        "candidature": {
+            "type": "belongsTo",
+            "entity": "Candidature",
+            "foreign": "contrats"
+        },
+        "contact": {
+            "type": "belongsTo",
+            "entity": "Contact",
+            "foreign": "contrats"
+        },
+        "account": {
+            "type": "belongsTo",
+            "entity": "Account",
+            "foreign": "contrats"
+        },
+        "opportunity": {
+            "type": "belongsTo",
+            "entity": "Opportunity",
+            "foreign": "contrats"
+        },
+        "formation": {
+            "type": "belongsTo",
+            "entity": "Formation",
+            "foreign": "contrats"
+        }
+    },
+    "indexes": {
+        "assignedUser": {
+            "columns": ["assignedUserId", "deleted"]
+        },
+        "createdAt": {
+            "columns": ["createdAt"]
+        }
+    },
+    "collection": {
+        "orderBy": "dateDebut",
+        "order": "desc"
+    }
+}

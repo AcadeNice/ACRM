@@ -1,0 +1,9 @@
+[
+    {"name": "name", "link": true},
+    {"name": "accountTypeAcadeNice", "width": 12},
+    {"name": "partnerType", "width": 12},
+    {"name": "relationStatut", "width": 12},
+    {"name": "industry", "width": 14},
+    {"name": "nbContratsSignes", "width": 10},
+    {"name": "dernierContratSigneLe", "width": 12}
+]

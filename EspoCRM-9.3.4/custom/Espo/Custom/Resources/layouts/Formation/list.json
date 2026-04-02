@@ -1,0 +1,19 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "niveau",
+        "width": 12
+    },
+    {
+        "name": "rncpCode",
+        "width": 12
+    },
+    {
+        "name": "opportunities",
+        "width": 16,
+        "notSortable": true
+    }
+]

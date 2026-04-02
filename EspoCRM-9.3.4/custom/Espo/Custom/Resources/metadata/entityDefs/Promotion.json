@@ -1,0 +1,130 @@
+{
+    "entityClassName": "Espo\\Core\\Templates\\Entities\\BasePlus",
+    "repositoryClassName": "Espo\\Core\\Templates\\Repositories\\BasePlus",
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "required": true,
+            "maxLength": 255,
+            "audited": true
+        },
+        "formation": {
+            "type": "link",
+            "required": true,
+            "audited": true
+        },
+        "filizClassId": {
+            "type": "varchar",
+            "maxLength": 100,
+            "audited": true
+        },
+        "modifierInformationsFiliz": {
+            "type": "bool",
+            "default": false,
+            "audited": true
+        },
+        "dateDebut": {
+            "type": "date",
+            "audited": true
+        },
+        "dateFin": {
+            "type": "date",
+            "audited": true
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "modifiedBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "assignedUser": {
+            "type": "link",
+            "required": false,
+            "audited": true,
+            "view": "views/fields/assigned-user"
+        },
+        "teams": {
+            "type": "linkMultiple",
+            "audited": true,
+            "view": "views/fields/teams"
+        },
+        "contrats": {
+            "type": "linkMultiple"
+        }
+    },
+    "links": {
+        "createdBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "modifiedBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "assignedUser": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "teams": {
+            "type": "hasMany",
+            "entity": "Team",
+            "relationName": "entityTeam",
+            "layoutRelationshipsDisabled": true
+        },
+        "meetings": {
+            "type": "hasMany",
+            "entity": "Meeting",
+            "foreign": "parent"
+        },
+        "calls": {
+            "type": "hasMany",
+            "entity": "Call",
+            "foreign": "parent"
+        },
+        "tasks": {
+            "type": "hasChildren",
+            "entity": "Task",
+            "foreign": "parent"
+        },
+        "emails": {
+            "type": "hasChildren",
+            "entity": "Email",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "formation": {
+            "type": "belongsTo",
+            "entity": "Formation",
+            "foreign": "promotions"
+        },
+        "contrats": {
+            "type": "hasMany",
+            "entity": "Contrat",
+            "foreign": "promotion"
+        }
+    },
+    "indexes": {
+        "assignedUser": {
+            "columns": ["assignedUserId", "deleted"]
+        },
+        "createdAt": {
+            "columns": ["createdAt"]
+        }
+    },
+    "collection": {
+        "orderBy": "dateDebut",
+        "order": "desc"
+    }
+}

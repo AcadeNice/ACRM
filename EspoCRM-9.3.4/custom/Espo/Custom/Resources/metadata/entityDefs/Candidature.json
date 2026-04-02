@@ -1,0 +1,174 @@
+{
+    "entityClassName": "Espo\\Core\\Templates\\Entities\\BasePlus",
+    "repositoryClassName": "Espo\\Core\\Templates\\Repositories\\BasePlus",
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "maxLength": 255
+        },
+        "contact": {
+            "type": "link",
+            "required": true,
+            "audited": true,
+            "view": "custom:views/fields/candidature-contact"
+        },
+        "opportunity": {
+            "type": "link",
+            "required": true,
+            "audited": true
+        },
+        "account": {
+            "type": "link",
+            "readOnly": true,
+            "layoutDetailDisabled": true,
+            "layoutListDisabled": true,
+            "layoutFiltersDisabled": true,
+            "layoutMassUpdateDisabled": true
+        },
+        "statutCandidature": {
+            "type": "enum",
+            "options": ["aProposer", "proposee", "cvEnvoye", "entretienPlanifie", "enAttenteRetour", "acceptee", "refuseeEntreprise", "refuseeCandidat", "abandonnee", "transformeeContrat"],
+            "default": "aProposer",
+            "audited": true,
+            "displayAsLabel": true
+        },
+        "datePositionnement": {
+            "type": "date",
+            "audited": true
+        },
+        "dateEnvoiCv": {
+            "type": "date",
+            "audited": true
+        },
+        "dateEntretien": {
+            "type": "date",
+            "audited": true
+        },
+        "decisionEntreprise": {
+            "type": "enum",
+            "options": ["", "enAttente", "acceptee", "refusee"],
+            "audited": true,
+            "displayAsLabel": true
+        },
+        "motifRefus": {
+            "type": "text",
+            "audited": true
+        },
+        "commentaire": {
+            "type": "text",
+            "audited": true
+        },
+        "priorite": {
+            "type": "enum",
+            "options": ["basse", "normale", "haute"],
+            "default": "normale",
+            "audited": true,
+            "displayAsLabel": true
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "modifiedBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "assignedUser": {
+            "type": "link",
+            "required": false,
+            "audited": true,
+            "view": "views/fields/assigned-user"
+        },
+        "teams": {
+            "type": "linkMultiple",
+            "audited": true,
+            "view": "views/fields/teams"
+        },
+        "contrats": {
+            "type": "linkMultiple"
+        }
+    },
+    "links": {
+        "createdBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "modifiedBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "assignedUser": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "teams": {
+            "type": "hasMany",
+            "entity": "Team",
+            "relationName": "entityTeam",
+            "layoutRelationshipsDisabled": true
+        },
+        "meetings": {
+            "type": "hasMany",
+            "entity": "Meeting",
+            "foreign": "parent"
+        },
+        "calls": {
+            "type": "hasMany",
+            "entity": "Call",
+            "foreign": "parent"
+        },
+        "tasks": {
+            "type": "hasChildren",
+            "entity": "Task",
+            "foreign": "parent"
+        },
+        "emails": {
+            "type": "hasChildren",
+            "entity": "Email",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "contact": {
+            "type": "belongsTo",
+            "entity": "Contact",
+            "foreign": "candidatures"
+        },
+        "opportunity": {
+            "type": "belongsTo",
+            "entity": "Opportunity",
+            "foreign": "candidatures"
+        },
+        "account": {
+            "type": "belongsTo",
+            "entity": "Account",
+            "foreign": "candidatures"
+        },
+        "contrats": {
+            "type": "hasMany",
+            "entity": "Contrat",
+            "foreign": "candidature"
+        }
+    },
+    "indexes": {
+        "assignedUser": {
+            "columns": ["assignedUserId", "deleted"]
+        },
+        "createdAt": {
+            "columns": ["createdAt"]
+        }
+    },
+    "collection": {
+        "orderBy": "datePositionnement",
+        "order": "desc"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "logo": "client/img/logo-light.svg",
+    "stylesheet": "client/custom/styles/acadenice-pro.css",
+    "stylesheetIframe": "client/css/espo/light-iframe.css",
+    "stylesheetIframeFallback": "client/css/espo/light-iframe.css",
+    "textColor": "#163347",
+    "chartGridColor": "#d7dee4",
+    "chartTickColor": "#e8edf1",
+    "chartSuccessColor": "#6ca87e",
+    "chartColorList": ["#275d7a", "#4f7d94", "#c38f2c", "#2d8f8b", "#b85f5a", "#7c90a8", "#8f7db6", "#d28e7f", "#b0b9c2"],
+    "chartColorAlternativeList": ["#275d7a", "#c38f2c", "#2d8f8b", "#b85f5a", "#8f7db6"],
+    "calendarColors": {
+        "": "#9bb5c180",
+        "bg": "#dbe6ebb3",
+        "Meeting": "#8db0c7",
+        "Call": "#d2a0a8",
+        "Task": "#9cc6aa"
+    }
+}

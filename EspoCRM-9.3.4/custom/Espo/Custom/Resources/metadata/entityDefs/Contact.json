@@ -1,0 +1,716 @@
+{
+    "fields": {
+        "salutationName": {
+            "type": "enum",
+            "options": [
+                "",
+                "Mr.",
+                "Ms.",
+                "Mrs.",
+                "Dr.",
+                "Pr.",
+                "Me"
+            ]
+        },
+        "photoIdentite": {
+            "type": "image"
+        },
+        "nomUsage": {
+            "type": "varchar",
+            "maxLength": 100
+        },
+        "birthdate": {
+            "type": "date",
+            "audited": true
+        },
+        "estMineur": {
+            "type": "bool",
+            "default": false,
+            "readOnly": true,
+            "layoutDetailDisabled": true,
+            "layoutListDisabled": true,
+            "layoutFiltersDisabled": true,
+            "layoutMassUpdateDisabled": true
+        },
+        "rqth": {
+            "type": "bool",
+            "default": false,
+            "audited": true
+        },
+        "sportifHautNiveau": {
+            "type": "bool",
+            "default": false,
+            "audited": true
+        },
+        "equivalenceJeune": {
+            "type": "bool",
+            "default": false,
+            "audited": true
+        },
+        "extensionBoe": {
+            "type": "bool",
+            "default": false,
+            "audited": true
+        },
+        "numeroSecuriteSociale": {
+            "type": "varchar",
+            "maxLength": 15,
+            "audited": true
+        },
+        "filizUserId": {
+            "type": "varchar",
+            "maxLength": 100,
+            "options": [],
+            "tooltip": true,
+            "audited": true
+        },
+        "modifierFilizUserId": {
+            "notNull": true,
+            "type": "bool",
+            "default": false,
+            "tooltip": false,
+            "audited": true
+        },
+        "contactRoles": {
+            "type": "multiEnum",
+            "options": [
+                "candidat",
+                "ancienCandidat",
+                "etudiant",
+                "alumni",
+                "collaborateur",
+                "dirigeant",
+                "tuteurEntreprise",
+                "partenaire",
+                "parent",
+                "autre"
+            ],
+            "audited": true
+        },
+        "parentRole": {
+            "type": "enum",
+            "options": [
+                "pere",
+                "mere",
+                "tuteurLegal",
+                "autre"
+            ],
+            "audited": true
+        },
+        "statutCandidat": {
+            "type": "enum",
+            "options": [
+                "nouveau",
+                "aQualifier",
+                "admissible",
+                "testEnCours",
+                "admis",
+                "enRechercheEntreprise",
+                "positionne",
+                "place",
+                "alumni",
+                "nonRetenu",
+                "abandon",
+                "injoignable",
+                "reporte"
+            ],
+            "displayAsLabel": true,
+            "tooltipText": "Utiliser ce champ pour indiquer l'etape reelle du suivi : nouveau a l'arrivee, a qualifier apres premier tri, admissible avant test, test en cours pendant l'evaluation, admis apres validation, en recherche entreprise apres admission, positionne quand le profil est propose, place apres signature ou placement confirme, alumni quand l'ancien etudiant rejoint le reseau des anciens.",
+            "audited": true
+        },
+        "formationPrincipale": {
+            "type": "link",
+            "audited": true
+        },
+        "responsableLegal": {
+            "type": "link",
+            "audited": true
+        },
+        "neEnFrance": {
+            "notNull": true,
+            "type": "bool",
+            "default": true,
+            "audited": true
+        },
+        "villeNaissance": {
+            "type": "varchar",
+            "maxLength": 100,
+            "audited": true
+        },
+        "departementNaissance": {
+            "type": "enum",
+            "options": [
+                "",
+                "01",
+                "02",
+                "03",
+                "04",
+                "05",
+                "06",
+                "07",
+                "08",
+                "09",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16",
+                "17",
+                "18",
+                "19",
+                "2A",
+                "2B",
+                "21",
+                "22",
+                "23",
+                "24",
+                "25",
+                "26",
+                "27",
+                "28",
+                "29",
+                "30",
+                "31",
+                "32",
+                "33",
+                "34",
+                "35",
+                "36",
+                "37",
+                "38",
+                "39",
+                "40",
+                "41",
+                "42",
+                "43",
+                "44",
+                "45",
+                "46",
+                "47",
+                "48",
+                "49",
+                "50",
+                "51",
+                "52",
+                "53",
+                "54",
+                "55",
+                "56",
+                "57",
+                "58",
+                "59",
+                "60",
+                "61",
+                "62",
+                "63",
+                "64",
+                "65",
+                "66",
+                "67",
+                "68",
+                "69",
+                "70",
+                "71",
+                "72",
+                "73",
+                "74",
+                "75",
+                "76",
+                "77",
+                "78",
+                "79",
+                "80",
+                "81",
+                "82",
+                "83",
+                "84",
+                "85",
+                "86",
+                "87",
+                "88",
+                "89",
+                "90",
+                "91",
+                "92",
+                "93",
+                "94",
+                "95",
+                "971",
+                "972",
+                "973",
+                "974",
+                "975",
+                "976",
+                "977",
+                "978",
+                "984",
+                "986",
+                "987",
+                "988",
+                "99"
+            ],
+            "audited": true,
+            "style": {
+                "10": null,
+                "11": null,
+                "12": null,
+                "13": null,
+                "14": null,
+                "15": null,
+                "16": null,
+                "17": null,
+                "18": null,
+                "19": null,
+                "21": null,
+                "22": null,
+                "23": null,
+                "24": null,
+                "25": null,
+                "26": null,
+                "27": null,
+                "28": null,
+                "29": null,
+                "30": null,
+                "31": null,
+                "32": null,
+                "33": null,
+                "34": null,
+                "35": null,
+                "36": null,
+                "37": null,
+                "38": null,
+                "39": null,
+                "40": null,
+                "41": null,
+                "42": null,
+                "43": null,
+                "44": null,
+                "45": null,
+                "46": null,
+                "47": null,
+                "48": null,
+                "49": null,
+                "50": null,
+                "51": null,
+                "52": null,
+                "53": null,
+                "54": null,
+                "55": null,
+                "56": null,
+                "57": null,
+                "58": null,
+                "59": null,
+                "60": null,
+                "61": null,
+                "62": null,
+                "63": null,
+                "64": null,
+                "65": null,
+                "66": null,
+                "67": null,
+                "68": null,
+                "69": null,
+                "70": null,
+                "71": null,
+                "72": null,
+                "73": null,
+                "74": null,
+                "75": null,
+                "76": null,
+                "77": null,
+                "78": null,
+                "79": null,
+                "80": null,
+                "81": null,
+                "82": null,
+                "83": null,
+                "84": null,
+                "85": null,
+                "86": null,
+                "87": null,
+                "88": null,
+                "89": null,
+                "90": null,
+                "91": null,
+                "92": null,
+                "93": null,
+                "94": null,
+                "95": null,
+                "99": null,
+                "971": null,
+                "972": null,
+                "973": null,
+                "974": null,
+                "975": null,
+                "976": null,
+                "977": null,
+                "978": null,
+                "984": null,
+                "986": null,
+                "987": null,
+                "988": null,
+                "01": null,
+                "02": null,
+                "03": null,
+                "04": null,
+                "05": null,
+                "06": null,
+                "07": null,
+                "08": null,
+                "09": null,
+                "2A": null,
+                "2B": null,
+                "": null
+            }
+        },
+        "nationaliteFiliz": {
+            "type": "enum",
+            "options": [
+                "francais",
+                "europeen",
+                "autre"
+            ],
+            "audited": true
+        },
+        "sexeFiliz": {
+            "type": "enum",
+            "options": [
+                "homme",
+                "femme"
+            ],
+            "audited": true
+        },
+        "emancipe": {
+            "type": "bool",
+            "default": false,
+            "audited": true
+        },
+        "titreSejourAutoriseTravail": {
+            "type": "bool",
+            "default": false,
+            "audited": true
+        },
+        "sourceCategory": {
+            "type": "enum",
+            "options": [
+                "jobboard",
+                "cvTheque",
+                "parrainage",
+                "siteWeb",
+                "telephone",
+                "reseauxSociaux",
+                "partenaire",
+                "evenement",
+                "campagne",
+                "autre"
+            ],
+            "audited": true
+        },
+        "sourceJobboard": {
+            "type": "enum",
+            "options": [
+                "",
+                "indeed",
+                "hellowork",
+                "linkedinJobs",
+                "welcomeToTheJungle",
+                "franceTravail",
+                "apec",
+                "meteojob",
+                "jobijoba",
+                "chooseYourBoss",
+                "autre"
+            ],
+            "audited": true
+        },
+        "sourceCvTheque": {
+            "type": "enum",
+            "options": [
+                "",
+                "welcomeToTheJungle",
+                "franceTravail",
+                "autre"
+            ],
+            "audited": true
+        },
+        "sourcePrescriberContact": {
+            "type": "link",
+            "audited": true
+        },
+        "sourcePrescriberAccount": {
+            "type": "link",
+            "audited": true
+        },
+        "sourceComment": {
+            "type": "text",
+            "audited": true
+        },
+        "contactsAccompagnes": {
+            "type": "linkMultiple"
+        },
+        "identiteCommentaires": {
+            "type": "text",
+            "audited": true
+        },
+        "profilCommentaires": {
+            "type": "text",
+            "audited": true
+        },
+        "tuteurCommentaires": {
+            "type": "text",
+            "audited": true
+        },
+        "parentCommentaires": {
+            "type": "text",
+            "audited": true
+        },
+        "zoneMobilite": {
+            "type": "multiEnum",
+            "storeArrayValues": true,
+            "options": [
+                "A 30 minutes",
+                "A 45 minutes",
+                "niceCentre",
+                "niceNord",
+                "niceEst",
+                "niceOuest",
+                "cimiez",
+                "riquier",
+                "lingostiere",
+                "arenas",
+                "saintLaurentDuVar",
+                "cagnesSurMer",
+                "villeneuveLoubet",
+                "antibes",
+                "cannes",
+                "monaco",
+                "menton",
+                "carros",
+                "vence",
+                "grasse",
+                "ligneTransportCommun",
+                "vehiculeNecessaireOk"
+            ],
+            "audited": true,
+            "default": [],
+            "style": {
+                "A 30 minutes": null,
+                "A 45 minutes": null,
+                "niceCentre": null,
+                "niceNord": null,
+                "niceEst": null,
+                "niceOuest": null,
+                "cimiez": null,
+                "riquier": null,
+                "lingostiere": null,
+                "arenas": null,
+                "saintLaurentDuVar": null,
+                "cagnesSurMer": null,
+                "villeneuveLoubet": null,
+                "antibes": null,
+                "cannes": null,
+                "monaco": null,
+                "menton": null,
+                "carros": null,
+                "vence": null,
+                "grasse": null,
+                "ligneTransportCommun": null,
+                "vehiculeNecessaireOk": null
+            }
+        },
+        "permis": {
+            "type": "multiEnum",
+            "options": [
+                "non",
+                "enCours",
+                "voiture",
+                "deuxRoues125",
+                "moto"
+            ],
+            "audited": true
+        },
+        "vehicule": {
+            "type": "multiEnum",
+            "options": [
+                "voiture",
+                "scooter",
+                "moto"
+            ],
+            "audited": true
+        },
+        "linkedinUrl": {
+            "type": "url",
+            "audited": true
+        },
+        "githubUrl": {
+            "type": "url",
+            "audited": true
+        },
+        "portfolioUrl": {
+            "type": "url",
+            "audited": true
+        },
+        "portfolioFile": {
+            "type": "file"
+        },
+        "cvUrl": {
+            "type": "url",
+            "audited": true
+        },
+        "cvFile": {
+            "type": "file"
+        },
+        "testResultat": {
+            "type": "enum",
+            "options": [
+                "nonPasse",
+                "enCours",
+                "reussi",
+                "echoue"
+            ],
+            "displayAsLabel": true,
+            "audited": true
+        },
+        "dateAdmission": {
+            "type": "date",
+            "audited": true
+        },
+        "datePlacement": {
+            "type": "date",
+            "audited": true
+        },
+        "skills": {
+            "type": "linkMultiple",
+            "audited": true
+        },
+        "addressStreetNumber": {
+            "type": "int"
+        },
+        "addressStreetExtension": {
+            "type": "enum",
+            "options": [
+                "",
+                "bis",
+                "ter",
+                "quater",
+                "A",
+                "B",
+                "C",
+                "D",
+                "E",
+                "F"
+            ]
+        },
+        "addressStreetType": {
+            "type": "enum",
+            "options": [
+                "rue",
+                "avenue",
+                "boulevard",
+                "chemin",
+                "impasse",
+                "allee",
+                "place",
+                "route",
+                "quai",
+                "residence",
+                "autre"
+            ]
+        },
+        "addressStreetName": {
+            "type": "varchar",
+            "maxLength": 100
+        },
+        "addressComplementFree": {
+            "type": "varchar",
+            "maxLength": 100
+        },
+        "addressPostalCode": {
+            "type": "varchar",
+            "maxLength": 5,
+            "pattern": "^[0-9]{5}$",
+            "view": "custom:views/fields/postal-code"
+        },
+        "addressCountry": {
+            "type": "enum",
+            "options": [
+                "France",
+                "Monaco",
+                "Italie",
+                "Espagne",
+                "Suisse",
+                "Allemagne",
+                "Belgique",
+                "Luxembourg",
+                "Andorre"
+            ],
+            "default": "France"
+        }
+    },
+    "links": {
+        "formationPrincipale": {
+            "type": "belongsTo",
+            "entity": "Formation",
+            "foreign": "contacts"
+        },
+        "responsableLegal": {
+            "type": "belongsTo",
+            "entity": "Contact",
+            "foreign": "personnesRattachees"
+        },
+        "personnesRattachees": {
+            "type": "hasMany",
+            "entity": "Contact",
+            "foreign": "responsableLegal"
+        },
+        "sourcePrescriberContact": {
+            "type": "belongsTo",
+            "entity": "Contact"
+        },
+        "sourcePrescriberAccount": {
+            "type": "belongsTo",
+            "entity": "Account"
+        },
+        "contactsAccompagnes": {
+            "type": "hasMany",
+            "entity": "Contact",
+            "foreign": "tuteursEntreprise",
+            "relationName": "contactTutorRelation"
+        },
+        "tuteursEntreprise": {
+            "type": "hasMany",
+            "entity": "Contact",
+            "foreign": "contactsAccompagnes",
+            "relationName": "contactTutorRelation"
+        },
+        "skills": {
+            "type": "hasMany",
+            "entity": "Skill",
+            "foreign": "contacts",
+            "relationName": "contactSkill"
+        },
+        "candidatures": {
+            "type": "hasMany",
+            "entity": "Candidature",
+            "foreign": "contact"
+        },
+        "contrats": {
+            "type": "hasMany",
+            "entity": "Contrat",
+            "foreign": "contact"
+        }
+    },
+    "collection": {
+        "orderBy": "createdAt",
+        "order": "desc",
+        "textFilterFields": [
+            "name",
+            "emailAddress"
+        ],
+        "fullTextSearch": false,
+        "countDisabled": false
+    },
+    "optimisticConcurrencyControl": false
+}

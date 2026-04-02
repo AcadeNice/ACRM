@@ -1,0 +1,9 @@
+{
+    "beforeCreateHookClassNameList": [
+        "Espo\\Custom\\Classes\\RecordHooks\\Account\\BeforeSave"
+    ],
+    "beforeUpdateHookClassNameList": [
+        "Espo\\Custom\\Classes\\RecordHooks\\Account\\BeforeSave"
+    ],
+    "updateDuplicateCheck": true
+}

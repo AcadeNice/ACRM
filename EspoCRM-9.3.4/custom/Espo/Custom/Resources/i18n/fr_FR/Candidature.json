@@ -1,0 +1,59 @@
+{
+    "fields": {
+        "name": "Référence interne",
+        "contact": "Candidat",
+        "opportunity": "Offre",
+        "account": "Organisation",
+        "statutCandidature": "Statut de la candidature",
+        "datePositionnement": "Date de positionnement",
+        "dateEnvoiCv": "Date d'envoi du CV",
+        "dateEntretien": "Date d'entretien",
+        "decisionEntreprise": "Décision de l'organisation",
+        "motifRefus": "Motif de refus",
+        "commentaire": "Commentaires",
+        "priorite": "Priorité",
+        "createdAt": "Date de création",
+        "modifiedAt": "Date de modification",
+        "contrats": "Contrats"
+    },
+    "links": {
+        "contact": "Candidat",
+        "opportunity": "Offre",
+        "account": "Organisation",
+        "contrats": "Contrats"
+    },
+    "labels": {
+        "Create Candidature": "Créer une candidature"
+    },
+    "options": {
+        "statutCandidature": {
+            "aProposer": "À proposer",
+            "proposee": "Proposée",
+            "cvEnvoye": "CV envoyé",
+            "entretienPlanifie": "Entretien planifié",
+            "enAttenteRetour": "En attente de retour",
+            "acceptee": "Acceptée",
+            "refuseeEntreprise": "Refusée par l'entreprise",
+            "refuseeCandidat": "Refusée par le candidat",
+            "abandonnee": "Abandonnée",
+            "transformeeContrat": "Transformée en contrat"
+        },
+        "decisionEntreprise": {
+            "enAttente": "En attente",
+            "acceptee": "Acceptée",
+            "refusee": "Refusée"
+        },
+        "priorite": {
+            "basse": "Basse",
+            "normale": "Normale",
+            "haute": "Haute"
+        }
+    },
+    "tooltips": {
+        "contact": "Candidat concerné par cette candidature.",
+        "opportunity": "Offre sur laquelle le candidat est positionné.",
+        "statutCandidature": "Statut précis de cette candidature, indépendant du statut global du candidat.",
+        "decisionEntreprise": "Retour final ou intermédiaire de l'organisation.",
+        "name": "Champ interne optionnel si tu veux ajouter une référence ou un repère manuel."
+    }
+}

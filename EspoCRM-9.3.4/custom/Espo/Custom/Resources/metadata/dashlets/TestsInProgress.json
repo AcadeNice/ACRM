@@ -1,0 +1,61 @@
+{
+    "view": "views/dashlets/abstract/record-list",
+    "aclScope": "Contact",
+    "entityType": "Contact",
+    "options": {
+        "view": "views/dashlets/options/record-list",
+        "fields": {
+            "title": {
+                "type": "varchar",
+                "required": true
+            },
+            "autorefreshInterval": {
+                "type": "enumFloat",
+                "options": [0, 0.5, 1, 2, 5, 10]
+            },
+            "displayRecords": {
+                "type": "int",
+                "min": 1,
+                "max": 20
+            },
+            "expandedLayout": {
+                "type": "base",
+                "view": "views/dashlets/fields/records/expanded-layout"
+            }
+        },
+        "defaults": {
+            "title": "Tests en cours",
+            "displayRecords": 6,
+            "autorefreshInterval": 0.5,
+            "sortBy": "modifiedAt",
+            "sortDirection": "desc",
+            "searchData": {
+                "advanced": [
+                    {
+                        "attribute": "statutCandidat",
+                        "type": "equals",
+                        "value": "testEnCours"
+                    }
+                ]
+            },
+            "expandedLayout": {
+                "rows": [
+                    [
+                        {
+                            "name": "name",
+                            "link": true
+                        }
+                    ],
+                    [
+                        {
+                            "name": "statutCandidat"
+                        },
+                        {
+                            "name": "testResultat"
+                        }
+                    ]
+                ]
+            }
+        }
+    }
+}

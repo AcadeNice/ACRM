@@ -1,0 +1,67 @@
+{
+    "controller": "controllers/record",
+    "color": "#7b6aa8",
+    "iconClass": "fas fa-file-signature",
+    "defaultSidePanelFieldList": [
+        ":assignedUser"
+    ],
+    "sidePanels": {
+        "detail": [
+            {
+                "name": "activities",
+                "reference": "activities"
+            },
+            {
+                "name": "history",
+                "reference": "history"
+            },
+            {
+                "name": "tasks",
+                "reference": "tasks"
+            }
+        ],
+        "detailSmall": [
+            {
+                "name": "activities",
+                "reference": "activities"
+            },
+            {
+                "name": "history",
+                "reference": "history"
+            },
+            {
+                "name": "tasks",
+                "reference": "tasks"
+            }
+        ]
+    },
+    "bottomPanels": {
+        "detail": [
+            {
+                "name": "activities",
+                "reference": "activities",
+                "disabled": true
+            },
+            {
+                "name": "history",
+                "reference": "history",
+                "disabled": true
+            }
+        ]
+    },
+    "dynamicLogic": {
+        "panels": {
+            "filizPanel": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "contratTypeGestion",
+                            "value": "filiz"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

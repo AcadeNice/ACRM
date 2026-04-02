@@ -1,0 +1,34 @@
+{
+    "scopeNames": {
+        "Account": "Organisation",
+        "Opportunity": "Offre",
+        "Formation": "Formation",
+        "Promotion": "Promotion",
+        "Skill": "Skill",
+        "Candidature": "Candidature",
+        "Contrat": "Contrat"
+    },
+    "scopeNamesPlural": {
+        "Account": "Organisations",
+        "Opportunity": "Offres",
+        "Formation": "Formations",
+        "Promotion": "Promotions",
+        "Skill": "Skills",
+        "Candidature": "Candidatures",
+        "Contrat": "Contrats"
+    },
+    "dashlets": {
+        "NewCandidates": "Nouveaux candidats",
+        "TestsInProgress": "Tests en cours",
+        "CandidaturesToPropose": "Candidatures à proposer",
+        "CvsToSend": "CV à envoyer",
+        "UpcomingInterviews": "Entretiens à venir",
+        "ContractsToFinalize": "Contrats à finaliser",
+        "IncomingTickets": "Tickets entrants",
+        "ActiveCampaigns": "Campagnes actives",
+        "UsefulTargetLists": "Listes de diffusion",
+        "SearchCompanyContacts": "Recherche entreprise",
+        "FollowUpCandidatures": "Candidatures à suivre",
+        "OpenOpportunities": "Offres ouvertes"
+    }
+}

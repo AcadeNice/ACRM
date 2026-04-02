@@ -1,0 +1,19 @@
+[
+    {
+        "name": "contact",
+        "width": 22,
+        "link": true
+    },
+    {
+        "name": "opportunity",
+        "width": 28
+    },
+    {
+        "name": "account",
+        "width": 22
+    },
+    {
+        "name": "statutCandidature",
+        "width": 18
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "name": "name",
+        "link": true,
+        "align": "left"
+    },
+    {
+        "name": "formation",
+        "align": "left"
+    },
+    {
+        "name": "dateDebut",
+        "width": 10,
+        "align": "left"
+    },
+    {
+        "name": "dateFin",
+        "width": 10,
+        "align": "left"
+    },
+    {
+        "name": "contrats",
+        "width": 25,
+        "notSortable": true,
+        "align": "left"
+    }
+]

@@ -1,0 +1,24 @@
+{
+    "fields": {
+        "name": "Nom",
+        "formation": "Formation",
+        "filizClassId": "ID promotion Filiz",
+        "modifierInformationsFiliz": "Modifier les informations Filiz",
+        "dateDebut": "Date de début",
+        "dateFin": "Date de fin",
+        "createdAt": "Date de création",
+        "modifiedAt": "Date de modification",
+        "contrats": "Contrats"
+    },
+    "links": {
+        "formation": "Formation",
+        "contrats": "Contrats"
+    },
+    "labels": {
+        "Create Promotion": "Créer une promotion"
+    },
+    "tooltips": {
+        "filizClassId": "Identifiant de la promotion dans Filiz. Indispensable pour préremplir un dossier.",
+        "modifierInformationsFiliz": "N'activer que si tu dois corriger manuellement une information technique venant de Filiz."
+    }
+}

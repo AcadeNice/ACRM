@@ -1,0 +1,58 @@
+{
+    "controller": "controllers/record",
+    "color": "#5b7db1",
+    "iconClass": "fas fa-brain",
+    "defaultSidePanelFieldList": [
+        ":assignedUser"
+    ],
+    "sidePanels": {
+        "detail": [
+            {
+                "name": "activities",
+                "reference": "activities",
+                "disabled": true
+            },
+            {
+                "name": "history",
+                "reference": "history",
+                "disabled": true
+            },
+            {
+                "name": "tasks",
+                "reference": "tasks",
+                "disabled": true
+            }
+        ],
+        "detailSmall": [
+            {
+                "name": "activities",
+                "reference": "activities",
+                "disabled": true
+            },
+            {
+                "name": "history",
+                "reference": "history",
+                "disabled": true
+            },
+            {
+                "name": "tasks",
+                "reference": "tasks",
+                "disabled": true
+            }
+        ]
+    },
+    "bottomPanels": {
+        "detail": [
+            {
+                "name": "activities",
+                "reference": "activities",
+                "disabled": true
+            },
+            {
+                "name": "history",
+                "reference": "history",
+                "disabled": true
+            }
+        ]
+    }
+}

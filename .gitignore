@@ -1,3 +1,10 @@
 .DS_Store
 EspoCRM-9.3.4/
 EspoCRM-9.3.4.zip
+!EspoCRM-9.3.4/custom/
+!EspoCRM-9.3.4/custom/**
+!EspoCRM-9.3.4/client/
+!EspoCRM-9.3.4/client/custom/
+!EspoCRM-9.3.4/client/custom/**
+!EspoCRM-9.3.4/html/
+!EspoCRM-9.3.4/html/main.html

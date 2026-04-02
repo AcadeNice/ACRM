@@ -1,0 +1,24 @@
+[
+    {
+        "label": "🤝 Candidature",
+        "rows": [
+            [{"name": "contact"}, {"name": "opportunity"}],
+            [{"name": "statutCandidature"}, {"name": "priorite"}]
+        ]
+    },
+    {
+        "label": "📅 Processus",
+        "rows": [
+            [{"name": "datePositionnement"}, {"name": "dateEnvoiCv"}],
+            [{"name": "dateEntretien"}, {"name": "decisionEntreprise"}],
+            [{"name": "motifRefus", "fullWidth": true}],
+            [{"name": "commentaire", "fullWidth": true}]
+        ]
+    },
+    {
+        "label": "🗂️ Système",
+        "rows": [
+            [{"name": "assignedUser"}, {"name": "teams"}]
+        ]
+    }
+]

@@ -1,0 +1,253 @@
+{
+    "fields": {
+        "name": {
+            "audited": true
+        },
+        "amount": {
+            "required": false
+        },
+        "closeDate": {
+            "required": false
+        },
+        "account": {
+            "required": true,
+            "audited": true
+        },
+        "contactOrganisation": {
+            "type": "link",
+            "audited": true
+        },
+        "formation": {
+            "type": "link",
+            "audited": true
+        },
+        "typeOpportunite": {
+            "type": "enum",
+            "options": [
+                "alternance",
+                "stage",
+                "emploi",
+                "autre"
+            ],
+            "displayAsLabel": true,
+            "audited": true
+        },
+        "statutOpportunity": {
+            "type": "enum",
+            "options": [
+                "ouverte",
+                "enCours",
+                "pourvue",
+                "fermee",
+                "suspendue"
+            ],
+            "displayAsLabel": true,
+            "audited": true
+        },
+        "localisation": {
+            "type": "varchar",
+            "maxLength": 255,
+            "audited": true
+        },
+        "teletravail": {
+            "type": "enum",
+            "options": [
+                "",
+                "non",
+                "partiel",
+                "oui"
+            ],
+            "audited": true
+        },
+        "nombrePostes": {
+            "type": "int",
+            "default": 1,
+            "audited": true
+        },
+        "nombreCandidatsAProposer": {
+            "type": "int",
+            "default": 1,
+            "audited": true
+        },
+        "urgence": {
+            "type": "enum",
+            "options": [
+                "basse",
+                "normale",
+                "haute",
+                "urgente"
+            ],
+            "displayAsLabel": true,
+            "audited": true
+        },
+        "niveauRequis": {
+            "type": "enum",
+            "options": [
+                "aucunNiveauPrecis",
+                "capBep",
+                "bac",
+                "bacPlus2",
+                "bacPlus3",
+                "bacPlus5",
+                "autre"
+            ],
+            "audited": true
+        },
+        "dateDebutSouhaitee": {
+            "type": "date",
+            "audited": true
+        },
+        "rythmeSouhaite": {
+            "type": "varchar",
+            "maxLength": 100,
+            "audited": true
+        },
+        "referenceInterneJobAffinity": {
+            "type": "varchar",
+            "maxLength": 100,
+            "audited": true
+        },
+        "modifierReferenceJobAffinity": {
+            "type": "bool",
+            "default": false,
+            "audited": true
+        },
+        "annonceTitre": {
+            "type": "varchar",
+            "maxLength": 255,
+            "audited": true
+        },
+        "annonceCourte": {
+            "type": "text",
+            "audited": true
+        },
+        "annonceTexte": {
+            "type": "text",
+            "audited": true
+        },
+        "annonceStatut": {
+            "type": "enum",
+            "options": [
+                "brouillon",
+                "aDiffuser",
+                "diffusee",
+                "pausee",
+                "fermee"
+            ],
+            "displayAsLabel": true,
+            "audited": true
+        },
+        "annonceCanauxDiffusion": {
+            "type": "multiEnum",
+            "options": [
+                "jobAffinity",
+                "indeed",
+                "hellowork",
+                "linkedinJobs",
+                "welcomeToTheJungle",
+                "siteAcadeNice",
+                "reseauxSociaux",
+                "autre"
+            ],
+            "audited": true
+        },
+        "skills": {
+            "type": "linkMultiple",
+            "audited": true
+        },
+        "salaireMin": {
+            "type": "currency",
+            "audited": true
+        },
+        "salaireMax": {
+            "type": "currency",
+            "audited": true
+        },
+        "permisRequis": {
+            "type": "bool",
+            "default": false,
+            "audited": true
+        },
+        "ageMinimum": {
+            "type": "int",
+            "audited": true
+        },
+        "ageMaximum": {
+            "type": "int",
+            "audited": true
+        },
+        "langueRequise": {
+            "type": "multiEnum",
+            "options": [
+                "",
+                "francais",
+                "anglais",
+                "italien",
+                "espagnol",
+                "russe",
+                "ukrainien",
+                "allemand",
+                "portugais",
+                "neerlandais",
+                "luxembourgeois",
+                "polonais",
+                "tcheque",
+                "slovaque",
+                "slovene",
+                "croate",
+                "serbe",
+                "bosnien",
+                "bulgare",
+                "macedonien",
+                "bielorusse",
+                "autre"
+            ],
+            "audited": true
+        },
+        "datePublication": {
+            "type": "date",
+            "audited": true
+        },
+        "dateFinPublication": {
+            "type": "date",
+            "audited": true
+        }
+    },
+    "links": {
+        "contactOrganisation": {
+            "type": "belongsTo",
+            "entity": "Contact"
+        },
+        "formation": {
+            "type": "belongsTo",
+            "entity": "Formation",
+            "foreign": "opportunities"
+        },
+        "skills": {
+            "type": "hasMany",
+            "entity": "Skill",
+            "foreign": "opportunities",
+            "relationName": "opportunitySkill"
+        },
+        "candidatures": {
+            "type": "hasMany",
+            "entity": "Candidature",
+            "foreign": "opportunity"
+        },
+        "contrats": {
+            "type": "hasMany",
+            "entity": "Contrat",
+            "foreign": "opportunity"
+        }
+    },
+    "collection": {
+        "orderBy": "createdAt",
+        "order": "desc",
+        "textFilterFields": [
+            "name"
+        ],
+        "fullTextSearch": false,
+        "countDisabled": false
+    },
+    "optimisticConcurrencyControl": true
+}

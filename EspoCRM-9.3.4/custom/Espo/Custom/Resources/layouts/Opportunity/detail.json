@@ -1,0 +1,174 @@
+[
+    {
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "formation"
+                }
+            ],
+            [
+                {
+                    "name": "account"
+                },
+                {
+                    "name": "contactOrganisation"
+                }
+            ],
+            [
+                {
+                    "name": "typeOpportunite"
+                },
+                {
+                    "name": "statutOpportunity"
+                }
+            ],
+            [
+                {
+                    "name": "dateDebutSouhaitee"
+                },
+                {
+                    "name": "rythmeSouhaite"
+                }
+            ],
+            [
+                {
+                    "name": "localisation"
+                },
+                {
+                    "name": "teletravail"
+                }
+            ],
+            [
+                {
+                    "name": "nombrePostes"
+                },
+                {
+                    "name": "nombreCandidatsAProposer"
+                }
+            ],
+            [
+                {
+                    "name": "urgence"
+                },
+                {
+                    "name": "niveauRequis"
+                }
+            ]
+        ],
+        "style": "default",
+        "name": "besoinPanel",
+        "label": "💼 Besoin"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "annonceTitre"
+                }
+            ],
+            [
+                {
+                    "name": "annonceStatut"
+                },
+                {
+                    "name": "annonceCanauxDiffusion"
+                }
+            ],
+            [
+                {
+                    "name": "datePublication"
+                },
+                {
+                    "name": "dateFinPublication"
+                }
+            ],
+            [
+                {
+                    "name": "annonceCourte"
+                }
+            ],
+            [
+                {
+                    "name": "annonceTexte"
+                }
+            ]
+        ],
+        "style": "default",
+        "name": "annoncePanel",
+        "label": "📣 Annonce"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "skills"
+                }
+            ],
+            [
+                {
+                    "name": "permisRequis"
+                },
+                {
+                    "name": "langueRequise"
+                }
+            ],
+            [
+                {
+                    "name": "ageMinimum"
+                },
+                {
+                    "name": "ageMaximum"
+                }
+            ],
+            [
+                {
+                    "name": "salaireMin"
+                },
+                {
+                    "name": "salaireMax"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ],
+        "style": "default",
+        "name": "prerequisPanel",
+        "label": "🧠 Pré requis"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "referenceInterneJobAffinity"
+                },
+                {
+                    "name": "modifierReferenceJobAffinity"
+                }
+            ]
+        ],
+        "style": "default",
+        "name": "jobAffinityPanel",
+        "label": "🔗 Job Affinity"
+    },
+    {
+        "rows": [
+            [
+                {
+                    "name": "createdAt"
+                },
+                {
+                    "name": "modifiedAt"
+                }
+            ]
+        ],
+        "style": "default",
+        "name": "systemPanel",
+        "label": "🗂️ Système"
+    }
+]
