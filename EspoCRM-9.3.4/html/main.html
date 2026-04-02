@@ -57,5 +57,43 @@
             <p class="credit small">&copy; 2026
             <a href="https://www.espocrm.com" title="Powered by EspoCRM" rel="noopener" target="_blank">EspoCRM, Inc.</a></p>
         </footer>
+        <script nonce="{{nonce}}">
+            document.addEventListener('click', event => {
+                const interactiveSelector = [
+                    'a', 'button', 'input', 'select', 'textarea', '[contenteditable="true"]',
+                    '.btn', '.dropdown-toggle', '.dropdown-menu',
+                    '.inline-edit-link', '.inline-save-link', '.inline-cancel-link'
+                ].join(', ');
+
+                if (event.target.closest(interactiveSelector)) return;
+
+                const cell = event.target.closest(
+                    '.record .cell[data-name], .record .field-cell[data-name], .record .form-group[data-name]'
+                );
+
+                if (!cell || cell.classList.contains('hidden') || cell.classList.contains('hidden-cell')) return;
+
+                const editTrigger = cell.querySelector(
+                    '[data-action="edit"], .action[data-action="edit"], .inline-edit-link, .edit-link'
+                );
+
+                if (!editTrigger) return;
+
+                const alreadyEditing =
+                    cell.querySelector('.inline-save-link, .inline-cancel-link') &&
+                    cell.querySelector('input, select, textarea, [contenteditable="true"]');
+
+                if (alreadyEditing) return;
+
+                event.preventDefault();
+                event.stopPropagation();
+
+                editTrigger.dispatchEvent(new MouseEvent('click', {
+                    bubbles: true,
+                    cancelable: true,
+                    view: window,
+                }));
+            }, true);
+        </script>
     </body>
 </html>

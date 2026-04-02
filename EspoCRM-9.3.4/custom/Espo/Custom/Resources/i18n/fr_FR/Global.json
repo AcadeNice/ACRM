@@ -30,5 +30,8 @@
         "SearchCompanyContacts": "Recherche entreprise",
         "FollowUpCandidatures": "Candidatures à suivre",
         "OpenOpportunities": "Offres ouvertes"
+    },
+    "messages": {
+        "changesLossConfirmation": "Les modifications non enregistrées seront perdues. Êtes-vous sûr ?"
     }
 }
