@@ -28,24 +28,51 @@ body > footer {
     display: none !important;
 }
 
-.navbar-side {
+.navbar-left-container {
     background: linear-gradient(135deg, #4cccb8 0%, #74d8c8 100%) !important;
 }
 
-.navbar-side .nav li > a,
-.navbar-side .nav .label-text,
-.navbar-side .nav-divider-text,
-.navbar-side .nav-divider-text .label-text,
-.navbar-side .nav .fa,
-.navbar-side .nav .fas,
-.navbar-side .nav .far,
-.navbar-side .nav .glyphicon {
+ul.nav.navbar-nav.navbar-right,
+ul.nav.navbar-nav.navbar-right.shadowed {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.dropdown-menu.more-dropdown-menu {
+    background: linear-gradient(135deg, #4cccb8 0%, #74d8c8 100%) !important;
+    border-color: transparent !important;
+}
+
+.dropdown-menu.more-dropdown-menu > li > a,
+.dropdown-menu.more-dropdown-menu > li > a .full-label,
+.dropdown-menu.more-dropdown-menu > li > a .label-text {
+    color: #2f3b43 !important;
+}
+
+.dropdown-menu.more-dropdown-menu .nav-divider-text,
+.dropdown-menu.more-dropdown-menu .nav-divider-text .label-text {
+    color: #ffffff !important;
+}
+
+
+body[data-navbar=side] #navbar .navbar li.tab > a > span.full-label {
+    color: #2f3b43 !important;
+}
+
+.navbar-side .nav li > a:hover,
+.navbar-side .nav li > a:focus,
+.navbar-side .nav li.open > a,
+.navbar-side .nav li.active > a {
     color: var(--acn-text-dark) !important;
 }
 
 .navbar-side .nav-divider-text,
-.navbar-side .nav-divider-text .label-text {
-    color: #111111 !important;
+.navbar-side .nav-divider-text .label-text,
+.navbar-left-container .nav-divider-text,
+.navbar-left-container .nav-divider-text .label-text,
+.navbar-left-container li.tab-divider .label-text,
+.navbar-left-container li.tab-divider .nav-divider-text {
+    color: #ffffff !important;
 }
 
 .page-header {
