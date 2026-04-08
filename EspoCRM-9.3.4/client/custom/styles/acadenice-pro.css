@@ -172,6 +172,22 @@ body[data-navbar=side] #navbar .navbar li.tab > a > span.full-label {
     color: var(--acn-text-dark) !important;
 }
 
+.actions-btn-group .detail-action-item.btn-primary,
+.actions-btn-group .detail-action-item[data-action="save"] {
+    background: var(--acn-accent) !important;
+    border-color: var(--acn-accent) !important;
+    color: var(--acn-text-dark) !important;
+}
+
+.actions-btn-group .detail-action-item.btn-primary:hover,
+.actions-btn-group .detail-action-item.btn-primary:focus,
+.actions-btn-group .detail-action-item[data-action="save"]:hover,
+.actions-btn-group .detail-action-item[data-action="save"]:focus {
+    background: #fda100 !important;
+    border-color: #fda100 !important;
+    color: var(--acn-text-dark) !important;
+}
+
 .panel-heading,
 .dashlet-header,
 .modal-header,

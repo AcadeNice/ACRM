@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="ACRM favicon">
+  <style>
+    text {
+      font-family: "Josefin Sans", "Helvetica Neue", Arial, sans-serif;
+      font-size: 56px;
+      font-weight: 700;
+      fill: #4cccb8;
+    }
+  </style>
+  <rect width="64" height="64" fill="none"/>
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central">C</text>
+</svg>
